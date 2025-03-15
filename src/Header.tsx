@@ -52,32 +52,12 @@ export default function Header() {
           <span id="logo" className="text-[24px] md:text-[32px] font-extrabold">
             WebCoders
           </span>
-          <ul id="contacts" className="mt-[5px] ml-auto mr-[30px]">
-            <li id="contact-phone" className="flex gap-[5px] items-center">
-              <img
-                className="w-[20px] h-[20px]"
-                src="/icons/phone.png"
-                alt=""
-              />
-              <span className="text-[14px] md:text-[16px]">(123) 123-4651</span>
-            </li>
-            <li id="contact-email" className="flex gap-[5px] items-center">
-              <img
-                className="w-[20px] h-[20px]"
-                src="/icons/email.png"
-                alt=""
-              />
-              <span className="text-[14px] md:text-[16px]">
-                example@gmail.com
-              </span>
-            </li>
-          </ul>
         </div>
 
         <img
           id="menu"
           src="/icons/menu.png"
-          className="w-[50px] h-[50px]"
+          className="size-[40px]"
           alt=""
           onClick={() => {
             document.getElementById("dropdown")?.toggleAttribute("hidden");
@@ -86,7 +66,7 @@ export default function Header() {
 
         <div
           id="dropdown"
-          className="absolute bg-[#313131] w-[100%] h-[400px] md:h-[500px] top-[93px] md:top-[80px] left-0"
+          className="absolute bg-[#313131] w-[100%] h-[400px] md:h-[500px] top-[60px] md:top-[80px] left-0"
           hidden
           onClick={() => {
             document.getElementById("dropdown")?.toggleAttribute("hidden");
