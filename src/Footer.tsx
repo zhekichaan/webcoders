@@ -69,16 +69,16 @@ export default function Footer() {
       </div>
       <form
         action=""
-        className="flex flex-col mx-auto text-[20px]"
+        className="flex flex-col max-w-[300px] md:w-[530px] mx-auto text-[20px]"
         onSubmit={handleSubmit}
       >
-        <div className="md:flex md:gap-[30px] md:mx-auto">
+        <div className="md:flex md:gap-[30px]">
           <div className="flex flex-col gap-[5px] mb-[10px]">
             <label htmlFor="phone">Your phone number: *</label>
             <PhoneInput
               required
               id="phone"
-              className="w-[100%] md:w-[250px] p-[15px] bg-white text-black placeholder:text-black"
+              className="md:w-[250px] p-[15px] bg-white text-black placeholder:text-black"
               type="text"
               placeholder="(___) ___-____"
               pattern="\(\d{3}\) \d{3}-\d{4}"
@@ -92,7 +92,7 @@ export default function Footer() {
             <input
               required
               id="business"
-              className="w-[100%] md:w-[250px] p-[15px] bg-white text-black placeholder:text-black"
+              className=" md:w-[250px] p-[15px] bg-white text-black placeholder:text-black"
               type="text"
               placeholder="Painting Services"
               minLength={3}
@@ -103,7 +103,7 @@ export default function Footer() {
         </div>
         <button
           type="submit"
-          className="text-[32px] font-bold py-[15px] mt-[20px] md:mx-auto w-[100%] md:w-[530px] bg-secondary cursor-pointer"
+          className="text-[32px] font-bold py-[15px] mt-[20px] md:mx-auto md:w-[530px] bg-secondary cursor-pointer"
         >
           <div className="flex gap-[5px] mx-auto w-fit items-center">
             <span>Get A Quote</span>
