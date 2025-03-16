@@ -16,3 +16,34 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 20px;
+}
+
+.btn {
+  padding: 12px 28px;
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: 500;
+  background-color: #fea300;
+  cursor: pointer;
+  border-radius: 5px;
+}

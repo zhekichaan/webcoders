@@ -101,10 +101,7 @@ export default function Footer() {
             />
           </div>
         </div>
-        <button
-          type="submit"
-          className="text-[32px] font-bold py-[15px] mt-[20px] md:mx-auto md:w-[530px] bg-secondary cursor-pointer"
-        >
+        <button type="submit" className="btn">
           <div className="flex gap-[5px] mx-auto w-fit items-center">
             <span>Get A Quote</span>
             <img src="/icons/form.png" className="size-[30px]" alt="" />

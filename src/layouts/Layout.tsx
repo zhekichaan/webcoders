@@ -6,7 +6,7 @@ export default function Layout() {
   return (
     <>
       <Header />
-      <main className="p-6 text-center">
+      <main>
         <Outlet />
       </main>
       <Footer />

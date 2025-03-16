@@ -3,124 +3,164 @@ import Quote from "../Quote";
 export default function Home() {
   return (
     <>
-      <section id="hero">
-        <div>
-          <h1>WebCoders</h1>
-          <h2>Full-Cycle Digital Agency</h2>
+      <section id="hero" className="">
+        <div className="px-[15px] py-[30px]">
+          <h1 className="font-extrabold">WebCoders</h1>
+          <p className="text-secondary my-[10px]">Full-Cycle Digital Agency</p>
           <p>
             Grow your business with confidence in the future. We offer
             transparent, clear, and structured solutions from experienced
             professionals with years of expertise.
           </p>
-          <button>Let's Work Together</button>
+          <button className="btn">Get A Quote</button>
         </div>
         <img src="" alt="" />
       </section>
-      <section id="services">
-        <ul>
-          <li>
-            <div>
-              <img src="" alt="" />
-              <h3>Websites</h3>
+      <section id="services" className="px-[10px] py-[20px]">
+        <h2>SERVICES</h2>
+        <ul className="grid grid-cols-1 gap-[10px] mt-[20px]">
+          <li className="bg-primary p-[15px]">
+            <div className="flex gap-[10px] items-center">
+              <img src="/icons/web.png" alt="" className="size-[80px]" />
+              <h3 className="font-bold text-secondary">Website</h3>
             </div>
-            <h4>What we develop:</h4>
-            <ul>
-              <li>Business Websites</li>
-              <li>E-commerce Stores</li>
-              <li>Landing Pages</li>
-              <li>CMS Development</li>
+            <h4 className="my-[10px]">What we develop:</h4>
+            <ul className="flex flex-col gap-[10px]">
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>Business Websites</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>E-commerce Stores</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>Landing Pages</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>CMS Development</p>
+              </li>
             </ul>
-            <button>See More...</button>
+            <button className="btn mt-[15px]">See More</button>
           </li>
-          <li>
-            <div>
-              <img src="" alt="" />
-              <h3>Design</h3>
+          <li className="bg-primary p-[15px]">
+            <div className="flex gap-[10px] items-center">
+              <img src="/icons/web.png" alt="" className="size-[80px]" />
+              <h3 className="font-bold text-secondary">Website</h3>
             </div>
-            <h4>What we do:</h4>
-            <ul>
-              <li>Logo & branding</li>
-              <li>UI/UX design</li>
-              <li>Website design</li>
-              <li>Branding & Identity</li>
+            <h4 className="my-[10px]">What we develop:</h4>
+            <ul className="flex flex-col gap-[10px]">
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>Business Websites</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>E-commerce Stores</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>Landing Pages</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>CMS Development</p>
+              </li>
             </ul>
-            <button>See More...</button>
+            <button className="btn mt-[15px]">See More</button>
           </li>
-          <li>
-            <div>
-              <img src="" alt="" />
-              <h3>Content Creation</h3>
+          <li className="bg-primary p-[15px]">
+            <div className="flex gap-[10px] items-center">
+              <img src="/icons/web.png" alt="" className="size-[80px]" />
+              <h3 className="font-bold text-secondary">Website</h3>
             </div>
-            <h4>What we create:</h4>
-            <ul>
-              <li>Motion Graphics</li>
-              <li>Social Media Content</li>
-              <li>Ad Campaigns</li>
-              <li>Visual Storytelling</li>
+            <h4 className="my-[10px]">What we develop:</h4>
+            <ul className="flex flex-col gap-[10px]">
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>Business Websites</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>E-commerce Stores</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>Landing Pages</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>CMS Development</p>
+              </li>
             </ul>
-            <button>See More...</button>
+            <button className="btn mt-[15px]">See More</button>
           </li>
-          <li>
-            <div>
-              <img src="" alt="" />
-              <h3>SEO</h3>
+          <li className="bg-primary p-[15px]">
+            <div className="flex gap-[10px] items-center">
+              <img src="/icons/web.png" alt="" className="size-[80px]" />
+              <h3 className="font-bold text-secondary">Website</h3>
             </div>
-            <h4>What we do:</h4>
-            <ul>
-              <li>SEO Optimization</li>
-              <li>Keyword Research</li>
-              <li>Backlink Building</li>
-              <li>Content Strategy</li>
+            <h4 className="my-[10px]">What we develop:</h4>
+            <ul className="flex flex-col gap-[10px]">
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>Business Websites</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>E-commerce Stores</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>Landing Pages</p>
+              </li>
+              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
+                <p>CMS Development</p>
+              </li>
             </ul>
-            <button>See More...</button>
+            <button className="btn mt-[15px]">See More</button>
           </li>
         </ul>
       </section>
-      <section id="team">
-        <ul>
+      <section id="team" className="px-[25px] py-[20px]">
+        <h2>TEAM</h2>
+        <ul className="mt-[20px] flex flex-col gap-[20px]">
           <li>
-            <img src="" alt="" />
-            <h3>Name</h3>
-            <h4>Position, Position, Position</h4>
+            <img src="" alt="" className="size-[270px] mx-auto" />
+            <h3 className="mt-[10px] font-bold">Name</h3>
+            <p>Position, Position, Position</p>
           </li>
           <li>
-            <img src="" alt="" />
-            <h3>Name</h3>
-            <h4>Position, Position, Position</h4>
+            <img src="" alt="" className="size-[270px] mx-auto" />
+            <h3 className="mt-[10px] font-bold">Name</h3>
+            <p>Position, Position, Position</p>
           </li>
           <li>
-            <img src="" alt="" />
-            <h3>Name</h3>
-            <h4>Position, Position, Position</h4>
+            <img src="" alt="" className="size-[270px] mx-auto" />
+            <h3 className="mt-[10px] font-bold">Name</h3>
+            <p>Position, Position, Position</p>
           </li>
           <li>
-            <img src="" alt="" />
-            <h3>Name</h3>
-            <h4>Position, Position, Position</h4>
+            <img src="" alt="" className="size-[270px] mx-auto" />
+            <h3 className="mt-[10px] font-bold">Name</h3>
+            <p>Position, Position, Position</p>
           </li>
         </ul>
       </section>
       <Quote />
-      <section id="values">
-        <h2>Our Values</h2>
-        <ul>
-          <li>
-            <span>1.</span>
-            <p>
+      <section id="values" className="px-[10px] py-[20px]">
+        <h2>VALUES</h2>
+        <ul className="flex flex-col gap-[60px] mt-[50px]">
+          <li className="relative bg-secondary p-[10px]">
+            <span className="absolute left-[20px] top-[-60px] text-[96px] text-white font-black z-100">
+              1.
+            </span>
+            <p className="pt-[40px]">
               Мы передаем заказчику всю интеллектуальную собственность. Все
               кабинеты, настройки и исходники только его.
             </p>
           </li>
-          <li>
-            <span>2.</span>
-            <p>
+          <li className="relative bg-secondary p-[10px]">
+            <span className="absolute left-[20px] top-[-60px] text-[96px] text-white font-black z-100">
+              2.
+            </span>
+            <p className="pt-[40px]">
               Мы передаем заказчику всю интеллектуальную собственность. Все
               кабинеты, настройки и исходники только его.
             </p>
           </li>
-          <li>
-            <span>3.</span>
-            <p>
+          <li className="relative bg-secondary p-[10px]">
+            <span className="absolute left-[20px] top-[-60px] text-[96px] text-white font-black z-100">
+              3.
+            </span>
+            <p className="pt-[40px]">
               Мы передаем заказчику всю интеллектуальную собственность. Все
               кабинеты, настройки и исходники только его.
             </p>

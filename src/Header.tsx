@@ -40,9 +40,7 @@ export default function Header() {
           </ul>
         </div>
 
-        <button className="ml-[50px] py-[12px] w-[150px] bg-secondary cursor-pointer">
-          Contact Us
-        </button>
+        <button className="btn">Contact Us</button>
       </div>
       <div
         id="header-mobile"
