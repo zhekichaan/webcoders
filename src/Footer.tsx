@@ -69,7 +69,7 @@ export default function Footer() {
       </div>
       <form
         action=""
-        className="flex flex-col max-w-[300px] md:w-[530px] mx-auto text-[20px]"
+        className="flex flex-col w-[300px] md:w-[530px] mx-auto text-[20px]"
         onSubmit={handleSubmit}
       >
         <div className="md:flex md:gap-[30px]">

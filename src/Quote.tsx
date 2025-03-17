@@ -15,9 +15,16 @@ export default function Quote() {
 
   return (
     <>
-      <section id="quote" className="px-[10px] py-[20px] relative">
-        <img src="quote.png" alt="" className="w-[400px] mx-auto" />
-        <span className="absolute right-[10%] top-[30px] text-[24px] text-center font-semibold">
+      <section
+        id="quote"
+        className="px-[10px] md:px-0 py-[20px]  mx-auto relative lg:static lg:flex"
+      >
+        <img
+          src="quote.png"
+          alt=""
+          className="w-[400px] md:mx-auto lg:h-[650px] lg:my-auto"
+        />
+        <span className="absolute lg:static right-[10%] top-[0px] text-[24px] text-center font-semibold">
           W<br />I<br />L<br />L<br />
           <br /> B<br />E<br /> <br />D<br />O<br />N<br />E<br />
           <br /> I<br />N<br />
@@ -25,17 +32,19 @@ export default function Quote() {
           <br /> D<br />A<br />Y<br />
           <br />
         </span>
-        <div>
-          <div className="mt-[50px]">
+        <div className="md:w-[530px] mx-auto my-auto">
+          <div className="mt-[30px] md:mt-[20px] lg:mt-0">
             <span className="text-secondary text-[24px] font-extrabold block">
               GET
             </span>
             <span className="text-[48px] font-extrabold">A QUOTE</span>
           </div>
-          <p>And discover growth points of your business</p>
+          <p className="mt-[10px]">
+            And discover growth points of your business
+          </p>
           <form
             action=""
-            className="flex flex-col max-w-[300px] md:w-[530px] mt-[20px] mx-auto text-[20px]"
+            className="flex flex-col mt-[20px] mx-auto text-[20px]"
             onSubmit={handleSubmit}
           >
             <div className="md:flex md:gap-[30px]">
