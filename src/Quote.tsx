@@ -17,24 +17,27 @@ export default function Quote() {
     <>
       <section
         id="quote"
-        className="px-[10px] md:px-0 py-[20px]  mx-auto relative lg:static lg:flex"
+        className="px-[10px] md:px-0 py-[20px] mx-auto lg:flex lg:justify-center lg:gap-[80px]"
       >
-        <img
-          src="quote.png"
-          alt=""
-          className="w-[400px] md:mx-auto lg:h-[650px] lg:my-auto"
-        />
-        <span className="absolute lg:static right-[10%] top-[0px] text-[24px] text-center font-semibold">
-          W<br />I<br />L<br />L<br />
-          <br /> B<br />E<br /> <br />D<br />O<br />N<br />E<br />
-          <br /> I<br />N<br />
-          <br /> 1<br />
-          <br /> D<br />A<br />Y<br />
-          <br />
-        </span>
-        <div className="md:w-[530px] mx-auto my-auto">
+        <div className="relative w-fit md:mx-auto lg:mx-0">
+          <img
+            src="quote.png"
+            alt=""
+            className="w-[400px] lg:h-[650px] lg:my-auto"
+          />
+          <span className="absolute right-[10px] lg:right-[-50px] top-[0px] text-[24px] text-center font-semibold">
+            W<br />I<br />L<br />L<br />
+            <br /> B<br />E<br /> <br />D<br />O<br />N<br />E<br />
+            <br /> I<br />N<br />
+            <br /> 1<br />
+            <br /> D<br />A<br />Y<br />
+            <br />
+          </span>
+        </div>
+
+        <div className="md:w-[530px] mx-auto my-auto lg:mx-0">
           <div className="mt-[30px] md:mt-[20px] lg:mt-0">
-            <span className="text-secondary text-[24px] font-extrabold block">
+            <span className="text-secondary text-[32px] font-extrabold block">
               GET
             </span>
             <span className="text-[48px] font-extrabold">A QUOTE</span>

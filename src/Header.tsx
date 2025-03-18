@@ -8,9 +8,9 @@ export default function Header() {
         className="hidden lg:flex justify-between w-container mx-auto px-[20px] py-[15px]"
       >
         <div className="flex w-[100%] justify-between items-center">
-          <span id="logo" className="text-[32px] font-extrabold">
+          <Link id="logo" to="/" className="text-[32px] font-extrabold">
             WebCoders
-          </span>
+          </Link>
           <nav className="flex gap-[30px] mx-auto text-[24px]">
             <Link to="/">Home</Link>
             <Link to="/website">Website</Link>
@@ -40,7 +40,9 @@ export default function Header() {
           </ul>
         </div>
 
-        <button className="btn">Contact Us</button>
+        <button className="btn ml-[30px] !mt-0 whitespace-nowrap">
+          Contact Us
+        </button>
       </div>
       <div
         id="header-mobile"
@@ -64,7 +66,7 @@ export default function Header() {
 
         <div
           id="dropdown"
-          className="absolute bg-[#313131] w-[100%] h-[400px] md:h-[500px] top-[60px] md:top-[80px] left-0"
+          className="absolute bg-[#313131] w-[100%] h-[400px] md:h-[500px] top-[60px] md:top-[70px] left-0"
           hidden
           onClick={() => {
             document.getElementById("dropdown")?.toggleAttribute("hidden");

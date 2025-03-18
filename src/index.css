@@ -17,8 +17,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+span {
+  display: block;
+}
+
 h1 {
-  font-size: 40px;
+  font-size: 48px;
+
+  @media (min-width: 768px) {
+    font-size: 96px;
+  }
 }
 
 h2 {
@@ -36,14 +44,31 @@ h4 {
 
 p {
   font-size: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .btn {
-  padding: 12px 28px;
+  padding: 10px 28px;
   margin-top: 20px;
   font-size: 28px;
   font-weight: 500;
   background-color: #fea300;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px 10px;
+
+  @media (min-width: 768px) {
+    padding: 30px 30px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 40px 30px;
+  }
 }
