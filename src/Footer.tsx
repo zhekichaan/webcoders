@@ -40,7 +40,7 @@ export default function Footer() {
             <li>
               <a href="">
                 <img
-                  src="/icons/socials/insta.png"
+                  src="/icons/socials/insta.svg"
                   className="size-[60px]"
                   alt="instagram icon"
                 />
@@ -49,7 +49,7 @@ export default function Footer() {
             <li>
               <a href="">
                 <img
-                  src="/icons/socials/facebook.png"
+                  src="/icons/socials/facebook.svg"
                   className="size-[60px]"
                   alt="facebook icon"
                 />
@@ -58,7 +58,7 @@ export default function Footer() {
             <li>
               <a href="">
                 <img
-                  src="/icons/socials/telegram.png"
+                  src="/icons/socials/telegram.svg"
                   className="size-[60px]"
                   alt="telegram icon"
                 />
