@@ -49,9 +49,13 @@ export default function Header() {
         className="flex items-center justify-between lg:hidden px-[10px] py-[10px] md:px-[20px] md:py-[15px]"
       >
         <div className="md:flex md:items-center w-[100%]">
-          <span id="logo" className="text-[24px] md:text-[32px] font-extrabold">
+          <Link
+            to="/"
+            id="logo"
+            className="text-[24px] md:text-[32px] font-extrabold"
+          >
             WebCoders
-          </span>
+          </Link>
         </div>
 
         <img

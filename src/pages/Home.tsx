@@ -28,40 +28,22 @@ export default function Home() {
               <h3 className="font-bold text-secondary">Website</h3>
             </div>
             <h4 className="my-[10px]">What we develop:</h4>
-            <ul className="flex flex-col gap-[10px]">
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>Business Websites</p>
+            <ul className="flex flex-col gap-[10px] *:flex *:items-start *:gap-[5px] *:text-[20px]">
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>E-commerce Stores</p>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>Landing Pages</p>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>CMS Development</p>
-              </li>
-            </ul>
-            <button className="btn mt-[15px]">See More</button>
-          </li>
-          <li className="bg-primary p-[15px]">
-            <div className="flex gap-[10px] items-center">
-              <img src="/icons/web.png" alt="" className="size-[80px]" />
-              <h3 className="font-bold text-secondary">Website</h3>
-            </div>
-            <h4 className="my-[10px]">What we develop:</h4>
-            <ul className="flex flex-col gap-[10px]">
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>Business Websites</p>
-              </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>E-commerce Stores</p>
-              </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>Landing Pages</p>
-              </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>CMS Development</p>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
             </ul>
             <button className="btn mt-[15px]">See More</button>
@@ -72,18 +54,22 @@ export default function Home() {
               <h3 className="font-bold text-secondary">Website</h3>
             </div>
             <h4 className="my-[10px]">What we develop:</h4>
-            <ul className="flex flex-col gap-[10px]">
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>Business Websites</p>
+            <ul className="flex flex-col gap-[10px] *:flex *:items-start *:gap-[5px] *:text-[20px]">
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>E-commerce Stores</p>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>Landing Pages</p>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>CMS Development</p>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
             </ul>
             <button className="btn mt-[15px]">See More</button>
@@ -94,18 +80,48 @@ export default function Home() {
               <h3 className="font-bold text-secondary">Website</h3>
             </div>
             <h4 className="my-[10px]">What we develop:</h4>
-            <ul className="flex flex-col gap-[10px]">
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>Business Websites</p>
+            <ul className="flex flex-col gap-[10px] *:flex *:items-start *:gap-[5px] *:text-[20px]">
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>E-commerce Stores</p>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>Landing Pages</p>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
-              <li className="flex items-center before:content-['⦿'] before:text-secondary before:mr-[5px]">
-                <p>CMS Development</p>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
+              </li>
+            </ul>
+            <button className="btn mt-[15px]">See More</button>
+          </li>
+          <li className="bg-primary p-[15px]">
+            <div className="flex gap-[10px] items-center">
+              <img src="/icons/web.png" alt="" className="size-[80px]" />
+              <h3 className="font-bold text-secondary">Website</h3>
+            </div>
+            <h4 className="my-[10px]">What we develop:</h4>
+            <ul className="flex flex-col gap-[10px] *:flex *:items-start *:gap-[5px] *:text-[20px]">
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
+              </li>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
+              </li>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
+              </li>
+              <li>
+                <img src="/icons/point.png" width={20} alt="" />
+                <span>Business Websites</span>
               </li>
             </ul>
             <button className="btn mt-[15px]">See More</button>

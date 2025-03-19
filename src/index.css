@@ -72,3 +72,13 @@ p {
     padding: 40px 30px;
   }
 }
+
+.list-item {
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "⦿";
+    color: var(--color-secondary) /* #fea300 */;
+  }
+}

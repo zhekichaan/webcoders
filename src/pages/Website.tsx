@@ -80,39 +80,37 @@ export default function Website() {
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className=" btn !mt-[10px] !text-[20px]">
-              See More...
-            </button>
+            <button className=" btn !mt-[10px] !text-[20px]">See More</button>
           </li>
           <li className="w-[300px]">
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className="btn !mt-[10px] !text-[20px]">See More...</button>
+            <button className="btn !mt-[10px] !text-[20px]">See More</button>
           </li>
           <li className="w-[300px]">
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className="btn !mt-[10px] !text-[20px]">See More...</button>
+            <button className="btn !mt-[10px] !text-[20px]">See More</button>
           </li>
           <li className="w-[300px]">
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className="btn !mt-[10px] !text-[20px]">See More...</button>
+            <button className="btn !mt-[10px] !text-[20px]">See More</button>
           </li>
           <li className="w-[300px]">
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className="btn !mt-[10px] !text-[20px]">See More...</button>
+            <button className="btn !mt-[10px] !text-[20px]">See More</button>
           </li>
           <li className="w-[300px]">
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className="btn !mt-[10px] !text-[20px]">See More...</button>
+            <button className="btn !mt-[10px] !text-[20px]">See More</button>
           </li>
         </ul>
       </section>
