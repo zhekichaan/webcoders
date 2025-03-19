@@ -17,7 +17,7 @@ export default function Quote() {
     <>
       <section
         id="quote"
-        className="px-[10px] md:px-0 py-[20px] mx-auto lg:flex lg:justify-center lg:gap-[80px]"
+        className="container px-[10px] md:px-0 py-[20px] mx-auto lg:flex lg:justify-center lg:gap-[80px]"
       >
         <div className="relative w-fit md:mx-auto lg:mx-0">
           <img
