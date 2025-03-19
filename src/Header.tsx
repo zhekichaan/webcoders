@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -8,15 +8,60 @@ export default function Header() {
         className="hidden lg:flex justify-between w-container mx-auto px-[20px] py-[15px]"
       >
         <div className="flex w-[100%] justify-between items-center">
-          <Link id="logo" to="/" className="text-[32px] font-extrabold">
+          <NavLink id="logo" to="/" className="text-[32px] font-extrabold">
             WebCoders
-          </Link>
+          </NavLink>
           <nav className="flex gap-[30px] mx-auto text-[24px]">
-            <Link to="/">Home</Link>
-            <Link to="/website">Website</Link>
-            <Link to="/design">Design</Link>
-            <Link to="/media">Media</Link>
-            <Link to="/seo">SEO</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-secondary font-bold"
+                  : "inactive" + " hover:scale-[1.05] duration-75 ease-in-out"
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-secondary font-bold"
+                  : "inactive" + " hover:scale-[1.05] duration-75 ease-in-out"
+              }
+              to="/website"
+            >
+              Website
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-secondary font-bold"
+                  : "inactive" + " hover:scale-[1.05] duration-75 ease-in-out"
+              }
+              to="/design"
+            >
+              Design
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-secondary font-bold"
+                  : "inactive" + " hover:scale-[1.05] duration-75 ease-in-out"
+              }
+              to="/media"
+            >
+              Media
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "text-secondary font-bold"
+                  : "inactive" + " hover:scale-[1.05] duration-75 ease-in-out"
+              }
+              to="/seo"
+            >
+              SEO
+            </NavLink>
           </nav>
           <ul id="contacts" className="mt-[5px]">
             <li id="contact-phone" className="flex gap-[5px] items-center">
@@ -40,7 +85,7 @@ export default function Header() {
           </ul>
         </div>
 
-        <button className="btn ml-[30px] !mt-0 whitespace-nowrap">
+        <button className="px-[20pxx] p-[10px] border ml-[30px] !mt-0 whitespace-nowrap hover:bg-secondary hover:border-secondary">
           Contact Us
         </button>
       </div>
@@ -49,13 +94,13 @@ export default function Header() {
         className="flex items-center justify-between lg:hidden px-[10px] py-[10px] md:px-[20px] md:py-[15px]"
       >
         <div className="md:flex md:items-center w-[100%]">
-          <Link
+          <NavLink
             to="/"
             id="logo"
             className="text-[24px] md:text-[32px] font-extrabold"
           >
             WebCoders
-          </Link>
+          </NavLink>
         </div>
 
         <img
@@ -77,11 +122,11 @@ export default function Header() {
           }}
         >
           <nav className="flex flex-col items-end md:items-start content-center my-auto gap-[20px] md:gap-[30px] py-[40px] md:py-[70px] px-[20px] md:px-[50px] text-[40px] font-light">
-            <Link to="/">Home &gt;</Link>
-            <Link to="/website">Website &gt;</Link>
-            <Link to="/design">Design &gt;</Link>
-            <Link to="/media">Media &gt;</Link>
-            <Link to="/seo">SEO &gt;</Link>
+            <NavLink to="/">Home &gt;</NavLink>
+            <NavLink to="/website">Website &gt;</NavLink>
+            <NavLink to="/design">Design &gt;</NavLink>
+            <NavLink to="/media">Media &gt;</NavLink>
+            <NavLink to="/seo">SEO &gt;</NavLink>
           </nav>
         </div>
       </div>

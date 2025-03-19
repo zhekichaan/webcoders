@@ -2,6 +2,12 @@ import Quote from "../Quote";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Website() {
+  const handleScroll = () => {
+    const elem = document.getElementById("quote");
+
+    elem?.scrollIntoView();
+  };
+
   return (
     <>
       <section
@@ -17,7 +23,9 @@ export default function Website() {
             Создаем качественные и адаптивные сайты с продающим дизайном в
             короткий срок и по приемлемой цене
           </span>
-          <button className="btn">Get A Quote</button>
+          <button onClick={handleScroll} className="btn">
+            Get A Quote
+          </button>
         </div>
         <DotLottieReact
           src="https://lottie.host/47c86cfa-e7d0-47c4-967a-a868a360dd09/TSE2ibky7u.lottie"
@@ -80,37 +88,67 @@ export default function Website() {
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className=" btn !mt-[10px] !text-[20px]">See More</button>
+            <button
+              onClick={handleScroll}
+              className=" btn !mt-[10px] !text-[20px]"
+            >
+              See More
+            </button>
           </li>
           <li className="w-[300px]">
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className="btn !mt-[10px] !text-[20px]">See More</button>
+            <button
+              onClick={handleScroll}
+              className="btn !mt-[10px] !text-[20px]"
+            >
+              See More
+            </button>
           </li>
           <li className="w-[300px]">
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className="btn !mt-[10px] !text-[20px]">See More</button>
+            <button
+              onClick={handleScroll}
+              className="btn !mt-[10px] !text-[20px]"
+            >
+              See More
+            </button>
           </li>
           <li className="w-[300px]">
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className="btn !mt-[10px] !text-[20px]">See More</button>
+            <button
+              onClick={handleScroll}
+              className="btn !mt-[10px] !text-[20px]"
+            >
+              See More
+            </button>
           </li>
           <li className="w-[300px]">
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className="btn !mt-[10px] !text-[20px]">See More</button>
+            <button
+              onClick={handleScroll}
+              className="btn !mt-[10px] !text-[20px]"
+            >
+              See More
+            </button>
           </li>
           <li className="w-[300px]">
             <h3 className="border-b pb-[10px]">Landing Page</h3>
             <h3 className="pt-[10px] mb-[5px]">from $500</h3>
             <span>DEADLINE: 10 DAYS</span>
-            <button className="btn !mt-[10px] !text-[20px]">See More</button>
+            <button
+              onClick={handleScroll}
+              className="btn !mt-[10px] !text-[20px]"
+            >
+              See More
+            </button>
           </li>
         </ul>
       </section>

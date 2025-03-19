@@ -2,6 +2,12 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Quote from "../Quote";
 
 export default function Design() {
+  const handleScroll = () => {
+    const elem = document.getElementById("quote");
+
+    elem?.scrollIntoView();
+  };
+
   return (
     <>
       <section
@@ -19,7 +25,9 @@ export default function Design() {
             вывесках и в документах. Также разрабатываем все составляющие бренда
             по отдельности.
           </span>
-          <button className="btn">Get A Quote</button>
+          <button onClick={handleScroll} className="btn">
+            Get A Quote
+          </button>
         </div>
         <DotLottieReact
           src="https://lottie.host/47c86cfa-e7d0-47c4-967a-a868a360dd09/TSE2ibky7u.lottie"
@@ -84,7 +92,9 @@ export default function Design() {
                 <h2 className="font-bold">LOGO</h2>
                 <h3 className="my-[5px]">$300</h3>
                 <span className="text-[20px]">DEADLINE: 1 WEEK</span>
-                <button className="btn hidden lg:block">See More</button>
+                <button onClick={handleScroll} className="btn hidden lg:block">
+                  See More
+                </button>
               </div>
 
               <div className="my-[20px] lg:my-0">
@@ -160,7 +170,9 @@ export default function Design() {
                 <span className="text-[20px]">DEADLINE: 1 WEEK</span>
               </div>
 
-              <button className="btn">See More</button>
+              <button onClick={handleScroll} className="btn">
+                See More
+              </button>
             </div>
           </li>
           <li className="px-[10px] py-[20px] flex flex-col md:flex-1/1 md:flex-row">
@@ -169,7 +181,9 @@ export default function Design() {
                 <h2 className="font-bold">LOGO</h2>
                 <h3 className="my-[5px]">$300</h3>
                 <span className="text-[20px]">DEADLINE: 1 WEEK</span>
-                <button className="btn hidden lg:block">See More</button>
+                <button onClick={handleScroll} className="btn hidden lg:block">
+                  See More
+                </button>
               </div>
 
               <div className="my-[20px] lg:my-0">
@@ -245,7 +259,9 @@ export default function Design() {
                 <span className="text-[20px]">DEADLINE: 1 WEEK</span>
               </div>
 
-              <button className="btn">See More</button>
+              <button onClick={handleScroll} className="btn">
+                See More
+              </button>
             </div>
           </li>
           <li className="px-[10px] py-[20px] flex flex-col md:flex-1/1 md:flex-row">
@@ -254,7 +270,9 @@ export default function Design() {
                 <h2 className="font-bold">LOGO</h2>
                 <h3 className="my-[5px]">$300</h3>
                 <span className="text-[20px]">DEADLINE: 1 WEEK</span>
-                <button className="btn hidden lg:block">See More</button>
+                <button onClick={handleScroll} className="btn hidden lg:block">
+                  See More
+                </button>
               </div>
 
               <div className="my-[20px] lg:my-0">
@@ -330,7 +348,9 @@ export default function Design() {
                 <span className="text-[20px]">DEADLINE: 1 WEEK</span>
               </div>
 
-              <button className="btn">See More</button>
+              <button onClick={handleScroll} className="btn">
+                See More
+              </button>
             </div>
           </li>
         </ul>

@@ -1,6 +1,13 @@
+import { Link } from "react-router-dom";
 import Quote from "../Quote";
 
 export default function Home() {
+  const handleScroll = () => {
+    const elem = document.getElementById("quote");
+
+    elem?.scrollIntoView();
+  };
+
   return (
     <>
       <section
@@ -15,7 +22,9 @@ export default function Home() {
             transparent, clear, and structured solutions from experienced
             professionals with years of expertise.
           </p>
-          <button className="btn">Get A Quote</button>
+          <button onClick={handleScroll} className="btn">
+            Get A Quote
+          </button>
         </div>
         <img src="home.png" alt="" className="hidden lg:block" />
       </section>
@@ -46,7 +55,9 @@ export default function Home() {
                 <span>Business Websites</span>
               </li>
             </ul>
-            <button className="btn mt-[15px]">See More</button>
+            <Link to="/website" className="btn mt-[15px]">
+              See More
+            </Link>
           </li>
           <li className="bg-primary p-[15px]">
             <div className="flex gap-[10px] items-center">
@@ -72,7 +83,9 @@ export default function Home() {
                 <span>Business Websites</span>
               </li>
             </ul>
-            <button className="btn mt-[15px]">See More</button>
+            <Link to="/design" className="btn mt-[15px]">
+              See More
+            </Link>
           </li>
           <li className="bg-primary p-[15px]">
             <div className="flex gap-[10px] items-center">
@@ -98,7 +111,9 @@ export default function Home() {
                 <span>Business Websites</span>
               </li>
             </ul>
-            <button className="btn mt-[15px]">See More</button>
+            <Link to="/media" className="btn mt-[15px]">
+              See More
+            </Link>
           </li>
           <li className="bg-primary p-[15px]">
             <div className="flex gap-[10px] items-center">
@@ -124,7 +139,9 @@ export default function Home() {
                 <span>Business Websites</span>
               </li>
             </ul>
-            <button className="btn mt-[15px]">See More</button>
+            <Link to="/seo" className="btn mt-[15px]">
+              See More
+            </Link>
           </li>
         </ul>
       </section>

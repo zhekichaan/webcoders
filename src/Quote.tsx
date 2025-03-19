@@ -57,9 +57,8 @@ export default function Quote() {
                   required
                   id="phone"
                   className="md:w-[250px] p-[15px] bg-white text-black placeholder:text-black"
-                  type="text"
-                  placeholder="(___) ___-____"
-                  pattern="\(\d{3}\) \d{3}-\d{4}"
+                  type="phone"
+                  placeholder="+1 (___) ___-____"
                   value={phone}
                   defaultCountry="CA"
                   onChange={setPhone}

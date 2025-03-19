@@ -17,6 +17,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 span {
   display: block;
 }
@@ -51,6 +55,7 @@ p {
 }
 
 .btn {
+  display: inline-block;
   padding: 10px 28px;
   margin-top: 20px;
   font-size: 28px;
@@ -58,6 +63,12 @@ p {
   background-color: #fea300;
   cursor: pointer;
   border-radius: 5px;
+
+  background-image: linear-gradient(
+    to right,
+    var(--color-secondary),
+    var(--color-gradient)
+  );
 }
 
 .container {
