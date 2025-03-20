@@ -20,6 +20,10 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+  padding: 0 10px;
+}
+
 span {
   display: block;
 }
@@ -80,9 +84,9 @@ p {
 }
 
 .cont {
-  padding: 0 10px;
+  padding: 20px 10px;
   border-radius: 15px;
-  margin: 20px auto;
+  margin: 40px auto;
 
   @media (min-width: 768px) {
     padding: 30px 30px;

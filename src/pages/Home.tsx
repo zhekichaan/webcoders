@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Quote from "../Quote";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -45,12 +45,12 @@ export default function Home() {
             Get A Quote
           </button>
         </div>
-        <DotLottieReact
+        {/* <DotLottieReact
           src="https://lottie.host/47c86cfa-e7d0-47c4-967a-a868a360dd09/TSE2ibky7u.lottie"
           loop
           autoplay
           className="hidden lg:block"
-        />
+        /> */}
       </section>
       <section id="services" className="cont bg-gray-100">
         <h2 className="text-black">SERVICES</h2>
