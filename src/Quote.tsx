@@ -17,26 +17,25 @@ export default function Quote() {
     <>
       <section
         id="quote"
-        className="container px-[10px] md:px-0 py-[20px] mx-auto lg:flex lg:justify-center lg:gap-[80px]"
+        className="container relative px-[10px] md:px-0 py-[60px] !my-[80px] md:!my-[40px] mx-auto lg:flex lg:items-center lg:justify-center lg:gap-[120px]"
       >
-        <div className="relative w-fit md:mx-auto lg:mx-0">
+        <div className="relative w-fit mx-auto lg:mx-0">
           <img
             src="quote.png"
             alt=""
-            className="w-[400px] lg:h-[650px] lg:my-auto"
+            className="w-[230px] lg:w-[300px] lg:my-auto"
           />
-          <span className="absolute right-[10px] lg:right-[-50px] top-[0px] text-[24px] text-center font-semibold">
+          <span className="!hidden lg:absolute right-[10px] lg:right-[-70px] top-[0px] text-[20px] text-center font-semibold text-black">
             W<br />I<br />L<br />L<br />
             <br /> B<br />E<br /> <br />D<br />O<br />N<br />E<br />
             <br /> I<br />N<br />
             <br /> 1<br />
             <br /> D<br />A<br />Y<br />
-            <br />
           </span>
         </div>
 
-        <div className="md:w-[530px] mx-auto my-auto lg:mx-0">
-          <div className="mt-[30px] md:mt-[20px] lg:mt-0">
+        <div className="absolute lg:static -translate-x-1/2 -translate-y-1/2 lg:translate-0 top-[50%] left-[50%]  md:w-[590px] mx-auto my-auto lg:mx-0 bg-[rgba(255,255,255,0.6)] bg-tra md:px-[30px] md:py-[30px] lg:py-[60px] md:rounded-[15px] md:drop-shadow-xl">
+          <div className="mt-[30px] md:mt-0 lg:mt-0">
             <span className="text-secondary text-[32px] font-extrabold block">
               GET
             </span>
@@ -56,7 +55,7 @@ export default function Quote() {
                 <PhoneInput
                   required
                   id="phone"
-                  className="md:w-[250px] p-[15px] bg-white text-black placeholder:text-black"
+                  className="md:w-[250px] p-[15px] bg-white text-black placeholder:text-gray-600 border border-black md:border-none rounded-[5px]"
                   type="phone"
                   placeholder="+1 (___) ___-____"
                   value={phone}
@@ -69,7 +68,7 @@ export default function Quote() {
                 <input
                   required
                   id="business"
-                  className=" md:w-[250px] p-[15px] bg-white text-black placeholder:text-black"
+                  className=" md:w-[250px] p-[15px] bg-white text-black placeholder:text-gray-600 border border-black md:border-none rounded-[5px]"
                   type="text"
                   placeholder="Painting Services"
                   minLength={3}

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="bg-[#313131]">
+    <header className="bg-bg text-white">
       <div
         id="header-desktop"
         className="hidden lg:flex justify-between w-container mx-auto px-[20px] py-[15px]"

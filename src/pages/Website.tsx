@@ -12,7 +12,7 @@ export default function Website() {
     <>
       <section
         id="hero"
-        className="container px-[50px] md:h-[500px] flex lg:grid lg:grid-cols-2 lg:gap-[20px]"
+        className="cont px-[50px] md:h-[500px] flex lg:grid lg:grid-cols-2 lg:gap-[20px]"
       >
         <div className="my-auto">
           <h1 className="font-extrabold">Website</h1>
@@ -35,10 +35,10 @@ export default function Website() {
         />
       </section>
       <section className="p-[10px] bg-linear-to-r from-secondary to-gradient">
-        <ul className="mx-auto w-fit grid grid-cols-1 md:grid-cols-2 gap-[10px] lg:grid-cols-4 lg:justify-items-center">
-          <li className="p-[10px] bg-bg w-[300px] g-[220px] ">
+        <ul className="mx-auto w-fit grid grid-cols-1 md:grid-cols-2 gap-[10px] lg:grid-cols-4 lg:justify-items-center *:bg-white">
+          <li className="p-[10px] w-[300px] g-[220px] ">
             <img
-              src="/icons/website/web1.png"
+              src="/icons/web.png"
               alt=""
               className="size-[70px] mb-[10px]"
             />
@@ -47,9 +47,9 @@ export default function Website() {
               структуризация сайта под вашу нишу
             </p>
           </li>
-          <li className="p-[10px] bg-bg w-[300px] g-[220px] ">
+          <li className="p-[10px] w-[300px] g-[220px] ">
             <img
-              src="/icons/website/web2.png"
+              src="/icons/web.png"
               alt=""
               className="size-[70px] mb-[10px]"
             />
@@ -58,9 +58,9 @@ export default function Website() {
               структуризация сайта под вашу нишу
             </p>
           </li>
-          <li className="p-[10px] bg-bg w-[300px] g-[220px] ">
+          <li className="p-[10px] w-[300px] g-[220px] ">
             <img
-              src="/icons/website/web3.png"
+              src="/icons/web.png"
               alt=""
               className="size-[70px] mb-[10px]"
             />
@@ -69,9 +69,9 @@ export default function Website() {
               структуризация сайта под вашу нишу
             </p>
           </li>
-          <li className="p-[10px] bg-bg w-[300px] g-[220px] ">
+          <li className="p-[10px] w-[300px] g-[220px] ">
             <img
-              src="/icons/website/web4.png"
+              src="/icons/web.png"
               alt=""
               className="size-[70px] mb-[10px]"
             />
@@ -82,7 +82,7 @@ export default function Website() {
           </li>
         </ul>
       </section>
-      <section className="container">
+      <section className="cont bg-gray-100 drop-shadow-xl">
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[30px] md:gap-x-[50px] mx-auto w-fit">
           <li className="w-[300px]">
             <h3 className="border-b pb-[10px]">Landing Page</h3>
@@ -153,7 +153,10 @@ export default function Website() {
         </ul>
       </section>
       <Quote />
-      <section id="projects" className="container lg:!px-[20px]">
+      <section
+        id="projects"
+        className="cont lg:!px-[20px] bg-gray-100 drop-shadow-xl"
+      >
         <h2>Our Projects</h2>
         <ul className="mt-[20px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[20px] md:gap-x-[20px] mx-auto w-fit *:w-[300px] *:lg:w-[400px]">
           <li>
@@ -212,7 +215,7 @@ export default function Website() {
           </li>
         </ul>
       </section>
-      <section id="faq" className="container">
+      <section id="faq" className="cont">
         <h2>Frequently Asked Questions (FAQ)</h2>
         <ul className="mt-[20px] *:not-last:mb-[20px] *:*:first:text-secondary">
           <li>

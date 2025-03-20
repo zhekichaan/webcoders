@@ -14,7 +14,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="px-[10px] md:px-0 py-[20px] md:pb-[50px] lg:py-[20px] lg:flex lg:items-center bg-primary">
+    <footer className="px-[10px] md:px-0 py-[20px] md:pb-[50px] lg:py-[20px] lg:flex lg:items-center bg-bg text-white">
       <div className="mx-auto w-fit">
         <span className="text-[48px] md:text-[96px] font-extrabold">
           WebCoders
@@ -78,7 +78,7 @@ export default function Footer() {
             <PhoneInput
               required
               id="phone"
-              className="md:w-[250px] p-[15px] bg-white text-black placeholder:text-black"
+              className="md:w-[250px] p-[15px] bg-white text-black placeholder:text-black rounded-[5px]"
               type="text"
               placeholder="(___) ___-____"
               pattern="\(\d{3}\) \d{3}-\d{4}"
@@ -92,7 +92,7 @@ export default function Footer() {
             <input
               required
               id="business"
-              className=" md:w-[250px] p-[15px] bg-white text-black placeholder:text-black"
+              className=" md:w-[250px] p-[15px] bg-white text-black placeholder:text-black rounded-[5px]"
               type="text"
               placeholder="Painting Services"
               minLength={3}
