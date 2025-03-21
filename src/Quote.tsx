@@ -17,13 +17,13 @@ export default function Quote() {
     <>
       <section
         id="quote"
-        className="container relative px-[10px] md:px-0 py-[60px] !my-[40px] md:!my-[40px] mx-auto lg:flex lg:items-center lg:justify-center lg:gap-[120px]"
+        className="cont relative px-[10px] md:px-0 !my-[40px] mx-auto lg:flex lg:items-center lg:justify-center lg:gap-[120px]"
       >
-        <div className="relative w-fit mx-auto lg:mx-0">
+        <div className="w-fit mx-auto lg:mx-0">
           <img
             src="quote.png"
             alt=""
-            className="w-[230px] lg:w-[300px] lg:my-auto"
+            className="w-[230px] lg:w-[300px] lg:my-auto absolute lg:static -translate-x-1/2 -translate-y-1/2 lg:translate-0 top-[50%] left-[50%]"
           />
           <span className="!hidden lg:absolute right-[10px] lg:right-[-70px] top-[0px] text-[20px] text-center font-semibold text-black">
             W<br />I<br />L<br />L<br />
@@ -34,7 +34,7 @@ export default function Quote() {
           </span>
         </div>
 
-        <div className="absolute lg:static -translate-x-1/2 -translate-y-1/2 lg:translate-0 top-[50%] left-[50%]  md:w-[590px] mx-auto my-auto lg:mx-0 bg-[rgba(255,255,255,0.6)] bg-tra md:px-[30px] md:py-[30px] lg:py-[60px] md:rounded-[15px] md:drop-shadow-xl">
+        <div className="relative md:w-[590px] mx-auto my-auto lg:mx-0 bg-[rgba(255,255,255,0.6)] bg-tra md:px-[30px] md:py-[30px] lg:py-[60px] md:rounded-[15px] md:drop-shadow-xl">
           <div className="mt-[30px] md:mt-0 lg:mt-0">
             <span className="text-secondary text-[32px] font-extrabold block">
               GET
