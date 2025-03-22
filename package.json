@@ -13,10 +13,11 @@
     "@lottiefiles/dotlottie-react": "^0.13.2",
     "@tailwindcss/vite": "^4.0.13",
     "react": "^19.0.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
-    "react-multi-carousel": "^2.8.5",
     "react-phone-number-input": "^3.4.12",
     "react-router-dom": "^7.3.0",
+    "swiper": "^11.2.6",
     "tailwindcss": "^4.0.13"
   },
   "devDependencies": {
