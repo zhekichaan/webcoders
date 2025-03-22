@@ -5,11 +5,10 @@ import Quote from "../Quote";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CountUp from "react-countup";
 
-// Import Swiper styles
-import "swiper/css";
-
 // import required modules
 import { EffectCards } from "swiper/modules";
+
+import "../swiper.css";
 
 export default function Home() {
   const handleScroll = () => {
