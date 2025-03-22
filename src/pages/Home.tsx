@@ -7,7 +7,6 @@ import CountUp from "react-countup";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/modules/effect-cards.min.css";
 
 // import required modules
 import { EffectCards } from "swiper/modules";
