@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import CountUp from "react-countup";
 
 // Import Swiper styles
-import "swiper/swiper.min.css";
+import "swiper/swiper.css";
 import "swiper/modules/effect-cards.min.css";
 
 // import required modules
