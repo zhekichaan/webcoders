@@ -79,7 +79,7 @@ export default function Header() {
                 alt=""
               />
               <span className="text-[14px] md:text-[16px]">
-                example@gmail.com
+                contact@webcoders.com
               </span>
             </li>
           </ul>

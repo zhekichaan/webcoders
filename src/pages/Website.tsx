@@ -1,5 +1,4 @@
 import Quote from "../Quote";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Website() {
   const handleScroll = () => {
@@ -10,10 +9,7 @@ export default function Website() {
 
   return (
     <>
-      <section
-        id="hero"
-        className="cont px-[50px] md:h-[500px] flex lg:grid lg:grid-cols-2 lg:gap-[20px]"
-      >
+      <section id="hero" className="cont !p-0 md:h-[500px] flex">
         <div className="my-auto">
           <h1 className="font-extrabold">Website</h1>
           <p className="text-secondary my-[10px]">
@@ -27,12 +23,7 @@ export default function Website() {
             Get A Quote
           </button>
         </div>
-        <DotLottieReact
-          src="https://lottie.host/47c86cfa-e7d0-47c4-967a-a868a360dd09/TSE2ibky7u.lottie"
-          loop
-          autoplay
-          className="hidden lg:block"
-        />
+        <img className="px-[100px]" src="/hero/web.png" alt="" />
       </section>
       <section className="p-[10px] bg-linear-to-r from-secondary to-gradient">
         <ul className="mx-auto w-fit grid grid-cols-1 md:grid-cols-2 gap-[10px] lg:grid-cols-4 lg:justify-items-center *:bg-white">

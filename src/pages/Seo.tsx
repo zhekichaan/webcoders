@@ -1,17 +1,14 @@
 export default function Seo() {
   return (
     <>
-      <section
-        id="hero"
-        className="container md:h-[500px] flex justify-between"
-      >
+      <section id="hero" className="cont !p-0 md:h-[500px] flex">
         <div className="my-auto">
-          <h1 className="font-extrabold">SEO</h1>
+          <h1 className="font-extrabold">Media</h1>
           <p className="text-secondary my-[10px]">Under Construction</p>
           <p>Hi</p>
           <button className="btn">Nothing to see here</button>
         </div>
-        <img src="home.png" alt="" className="hidden lg:block" />
+        <img className="px-[100px]" src="/hero/seo.png" alt="" />
       </section>
     </>
   );

@@ -1,4 +1,4 @@
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Quote from "../Quote";
 
 export default function Design() {
@@ -10,31 +10,20 @@ export default function Design() {
 
   return (
     <>
-      <section
-        id="hero"
-        className="container px-[50px] md:h-[500px] flex lg:grid lg:grid-cols-2 lg:gap-[20px]"
-      >
+      <section id="hero" className="cont !p-0 md:h-[500px] flex">
         <div className="my-auto">
-          <h1 className="font-extrabold">Design</h1>
-          <p className="text-secondary my-[10px]">
-            Дизайн — самая важная инвестиция, которую вы можете сделать в свой
-            бизнес.
-          </p>
+          <h1 className="font-extrabold">WebCoders</h1>
+          <p className="text-secondary my-[10px]">Full Cycle Digital Agency</p>
           <span>
-            Разработаем дизайн, фирменный стиль и логотип, готовый для печати на
-            вывесках и в документах. Также разрабатываем все составляющие бренда
-            по отдельности.
+            Развивайте свой бизнес с уверенностью в завтрашнем дне. Мы
+            предлагаем прозрачную, понятную и системную работу опытных
+            специалистов с многолетним стажем.
           </span>
           <button onClick={handleScroll} className="btn">
             Get A Quote
           </button>
         </div>
-        <DotLottieReact
-          src="https://lottie.host/47c86cfa-e7d0-47c4-967a-a868a360dd09/TSE2ibky7u.lottie"
-          loop
-          autoplay
-          className="hidden lg:block"
-        />
+        <img className="px-[100px]" src="/hero/design.png" alt="" />
       </section>
       <section className="p-[10px] bg-linear-to-r from-secondary to-gradient">
         <ul className="mx-auto w-fit grid grid-cols-1 md:grid-cols-2 gap-[10px] lg:grid-cols-4 lg:justify-items-center">
@@ -84,7 +73,7 @@ export default function Design() {
           </li>
         </ul>
       </section>
-      <section id="products" className="container">
+      <section id="products" className="cont">
         <ul className="flex flex-col gap-[20px]">
           <li className="px-[10px] py-[20px] flex flex-col md:flex-1/1 md:flex-row">
             <div className="flex-initial lg:flex gap-[60px]">
@@ -356,7 +345,7 @@ export default function Design() {
         </ul>
       </section>
       <Quote />
-      <section id="faq" className="container">
+      <section id="faq" className="cont">
         <h2>Frequently Asked Questions (FAQ)</h2>
         <ul className="mt-[20px] *:not-last:mb-[20px] *:*:first:text-secondary">
           <li>

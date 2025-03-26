@@ -19,11 +19,8 @@ export default function Home() {
 
   return (
     <>
-      <section
-        id="hero"
-        className="cont !px-0 md:h-[500px] flex lg:grid lg:grid-cols-2 lg:gap-[20px]"
-      >
-        <div className="my-auto">
+      <section id="hero" className="cont !p-0 md:h-[500px] flex">
+        <div className="my-auto flex-auto">
           <h1 className="font-extrabold">WebCoders</h1>
           <p className="text-secondary my-[10px]">Full Cycle Digital Agency</p>
           <span>
@@ -35,6 +32,7 @@ export default function Home() {
             Get A Quote
           </button>
         </div>
+        <img className="px-[100px]" src="/hero/home.png" alt="" />
       </section>
       <section id="services" className="cont md:bg-gray-100">
         <h2 className="text-black">SERVICES</h2>
