@@ -1,5 +1,3 @@
-import React from "react";
-
 interface HeroSectionProps {
   title: string;
   subtitle: string;
