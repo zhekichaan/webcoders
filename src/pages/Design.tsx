@@ -1,4 +1,5 @@
 // import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import HeroSection from "../HeroSection";
 import Quote from "../Quote";
 
 export default function Design() {
@@ -10,21 +11,14 @@ export default function Design() {
 
   return (
     <>
-      <section id="hero" className="cont !p-0 md:h-[500px] flex">
-        <div className="my-auto">
-          <h1 className="font-extrabold">WebCoders</h1>
-          <p className="text-secondary my-[10px]">Full Cycle Digital Agency</p>
-          <span>
-            Развивайте свой бизнес с уверенностью в завтрашнем дне. Мы
-            предлагаем прозрачную, понятную и системную работу опытных
-            специалистов с многолетним стажем.
-          </span>
-          <button onClick={handleScroll} className="btn">
-            Get A Quote
-          </button>
-        </div>
-        <img className="px-[100px]" src="/hero/design.png" alt="" />
-      </section>
+      <HeroSection
+        title="Design"
+        subtitle="Full Cycle Digital Agency"
+        text="Развивайте свой бизнес с уверенностью в завтрашнем дне..."
+        imgSrc="/hero/design.png"
+        buttonText="Get A Quote"
+        scrollToId="quote"
+      />
       <section className="p-[10px] bg-linear-to-r from-secondary to-gradient">
         <ul className="mx-auto w-fit grid grid-cols-1 md:grid-cols-2 gap-[10px] lg:grid-cols-4 lg:justify-items-center">
           <li className="p-[10px] bg-bg w-[300px] g-[220px] ">

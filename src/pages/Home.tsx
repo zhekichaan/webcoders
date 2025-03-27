@@ -9,146 +9,101 @@ import CountUp from "react-countup";
 import { EffectCards } from "swiper/modules";
 
 import "../swiper.css";
+import HeroSection from "../HeroSection";
 
 export default function Home() {
-  const handleScroll = () => {
-    const elem = document.getElementById("quote");
-
-    elem?.scrollIntoView();
-  };
+  const services = [
+    {
+      title: "Website",
+      icon: "/icons/web.png",
+      href: "/website",
+      features: [
+        "Landing Pages",
+        "Business Sites",
+        "E-commerce Platforms",
+        "Custom CMS Solutions",
+      ],
+    },
+    {
+      title: "Design",
+      icon: "/icons/design.png",
+      href: "/design",
+      features: [
+        "UI/UX Interfaces",
+        "Brand Identity Kits",
+        "Figma Prototypes",
+        "Custom Logo Design",
+      ],
+    },
+    {
+      title: "Media",
+      icon: "/icons/media.png",
+      href: "/media",
+      features: [
+        "SMM Graphics",
+        "Video Editing",
+        "Reels & Shorts",
+        "Motion Animation",
+      ],
+    },
+    {
+      title: "SEO",
+      icon: "/icons/seo.png",
+      href: "/seo",
+      features: [
+        "Keyword Research",
+        "On-page Optimization",
+        "Google Ads Setup",
+        "Backlink Strategy",
+      ],
+    },
+  ];
 
   return (
     <>
-      <section id="hero" className="cont !p-0 md:h-[500px] flex">
-        <div className="my-auto flex-auto">
-          <h1 className="font-extrabold">WebCoders</h1>
-          <p className="text-secondary my-[10px]">Full Cycle Digital Agency</p>
-          <span>
-            Развивайте свой бизнес с уверенностью в завтрашнем дне. Мы
-            предлагаем прозрачную, понятную и системную работу опытных
-            специалистов с многолетним стажем.
-          </span>
-          <button onClick={handleScroll} className="btn">
-            Get A Quote
-          </button>
-        </div>
-        <img className="px-[100px]" src="/hero/home.png" alt="" />
-      </section>
-      <section id="services" className="cont md:bg-gray-100">
-        <h2 className="text-black">SERVICES</h2>
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[10px] mt-[20px] *:rounded-[15px] *:bg-white *:drop-shadow-xl *:py-[30px]">
-          <li className="p-[15px]">
-            <div className="flex gap-[10px] items-center">
-              <img src="/icons/web.png" alt="" className="size-[80px]" />
-              <h3 className="font-bold text-secondary">Website</h3>
-            </div>
-            <h4 className="my-[10px]">What we develop:</h4>
-            <ul className="flex flex-col gap-[10px] *:flex *:items-start *:gap-[5px] *:text-[20px]">
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-            </ul>
-            <Link to="/website" className="btn mt-[15px] w-[100%] text-center">
-              See More
-            </Link>
-          </li>
-          <li className="p-[15px]">
-            <div className="flex gap-[10px] items-center">
-              <img src="/icons/web.png" alt="" className="size-[80px]" />
-              <h3 className="font-bold text-secondary">Design</h3>
-            </div>
-            <h4 className="my-[10px]">What we develop:</h4>
-            <ul className="flex flex-col gap-[10px] *:flex *:items-start *:gap-[5px] *:text-[20px]">
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-            </ul>
-            <Link to="/design" className="btn mt-[15px] w-[100%] text-center">
-              See More
-            </Link>
-          </li>
-          <li className="p-[15px]">
-            <div className="flex gap-[10px] items-center">
-              <img src="/icons/web.png" alt="" className="size-[80px]" />
-              <h3 className="font-bold text-secondary">Media</h3>
-            </div>
-            <h4 className="my-[10px]">What we develop:</h4>
-            <ul className="flex flex-col gap-[10px] *:flex *:items-start *:gap-[5px] *:text-[20px]">
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-            </ul>
-            <Link to="/media" className="btn mt-[15px] w-[100%] text-center">
-              See More
-            </Link>
-          </li>
-          <li className="p-[15px]">
-            <div className="flex gap-[10px] items-center">
-              <img src="/icons/web.png" alt="" className="size-[80px]" />
-              <h3 className="font-bold text-secondary">SEO</h3>
-            </div>
-            <h4 className="my-[10px]">What we develop:</h4>
-            <ul className="flex flex-col gap-[10px] *:flex *:items-start *:gap-[5px] *:text-[20px]">
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-              <li>
-                <img src="/icons/point.png" width={20} alt="" />
-                <span>Business Websites</span>
-              </li>
-            </ul>
-            <Link to="/seo" className="btn mt-[15px] w-[100%] text-center">
-              See More
-            </Link>
-          </li>
+      <HeroSection
+        title="Home"
+        subtitle="Full Cycle Digital Agency"
+        text="Развивайте свой бизнес с уверенностью в завтрашнем дне..."
+        imgSrc="/hero/design.png"
+        buttonText="Get A Quote"
+        scrollToId="quote"
+      />
+      <section className="cont p-[10px] bg-gray-100">
+        <h2 className="text-[26px] font-bold mb-[20px] text-center">
+          SERVICES
+        </h2>
+        <ul className="mx-auto w-fit grid grid-cols-1 md:grid-cols-2 gap-[20px] lg:grid-cols-4 lg:justify-items-center">
+          {services.map((item, index) => (
+            <li
+              key={index}
+              className="p-[20px] max-w-[300px] min-h-[350px] bg-white rounded-[15px] drop-shadow-sm flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="size-[70px] mb-[10px] mx-auto"
+                />
+                <h3 className="text-[22px] font-bold text-secondary text-center">
+                  {item.title}
+                </h3>
+                <p className="text-center font-semibold mt-[10px] mb-[5px]">
+                  What we do:
+                </p>
+                <ul className="text-sm space-y-1">
+                  {item.features.map((feat, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <span className="text-secondary">✔</span> {feat}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Link to={item.href} className="btn w-full mt-[15px] text-center">
+                See More
+              </Link>
+            </li>
+          ))}
         </ul>
       </section>
       <div className="flex flex-col-reverse lg:flex-row overflow-hidden lg:gap-[150px] lg:justify-center">

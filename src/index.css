@@ -16,6 +16,74 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Utility typography overrides */
+.text-sm {
+  font-size: 14px !important;
+}
+.text-base {
+  font-size: 16px !important;
+}
+.text-md {
+  font-size: 18px !important;
+}
+.text-lg {
+  font-size: 20px !important;
+}
+
+.package-type {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.tab-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto 30px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px 0px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  z-index: 10;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  color: #333;
+  width: 150px;
+}
+
+.tab-btn.active {
+  color: white;
+  font-weight: 600;
+}
+
+.tab-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: var(--color-secondary);
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
 html {
   scroll-behavior: smooth;
 }
