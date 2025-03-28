@@ -33,7 +33,7 @@ export default function HeroSection({
           </button>
         )}
       </div>
-      <img className="px-[100px] hidden lg:block" src={imgSrc} alt="" />
+      <img className="hidden lg:block" src={imgSrc} alt="" />
     </section>
   );
 }

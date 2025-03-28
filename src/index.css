@@ -10,10 +10,14 @@
   color-scheme: light;
   background-color: white;
 
+  color: var(--color-bg);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  cursor: default;
 }
 
 /* Utility typography overrides */

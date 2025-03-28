@@ -4,10 +4,10 @@ export default function Media() {
   return (
     <>
       <HeroSection
-        title="Design"
+        title="Media"
         subtitle="Full Cycle Digital Agency"
         text="Развивайте свой бизнес с уверенностью в завтрашнем дне..."
-        imgSrc="/hero/design.png"
+        imgSrc="/hero/media.png"
         buttonText="Get A Quote"
         scrollToId="quote"
       />

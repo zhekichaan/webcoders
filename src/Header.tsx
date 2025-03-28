@@ -5,7 +5,7 @@ export default function Header() {
     <header className="bg-bg text-white">
       <div
         id="header-desktop"
-        className="hidden lg:flex justify-between w-container mx-auto px-[20px] py-[15px]"
+        className="hidden lg:flex justify-between mx-auto px-[20px] py-[15px]"
       >
         <div className="flex w-[100%] justify-between items-center">
           <NavLink id="logo" to="/" className="text-[32px] font-extrabold">
