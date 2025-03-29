@@ -1,17 +1,10 @@
 import { Link } from "react-router-dom";
 import Quote from "../Quote";
-// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import CountUp from "react-countup";
 
-// import required modules
-import { EffectCards } from "swiper/modules";
-
-import "../swiper.css";
 import HeroSection from "../HeroSection";
 import { motion } from "framer-motion";
+import FaqSection from "../Faq";
 
 export default function Home() {
   const stats = [
@@ -20,21 +13,41 @@ export default function Home() {
       number: 99,
       text: "Satisfied Clients",
       id: "counter-clients",
-      duration: 4.2,
     },
     {
       icon: "/icons/stats/time.png",
       number: 15,
       text: "Years Of Experience",
       id: "counter-years",
-      duration: 4.4,
     },
     {
       icon: "/icons/stats/project.png",
       number: 50,
       text: "Completed Projects",
       id: "counter-projects",
-      duration: 4.6,
+    },
+  ];
+
+  const faqs = [
+    {
+      question: "What services does WebCoders provide?",
+      answer:
+        "We specialize in website development, UI/UX design, SEO optimization, and digital media solutions tailored to your business needs.",
+    },
+    {
+      question: "How long does it take to build a website?",
+      answer:
+        "The timeline varies based on complexity. A simple landing page takes about a week, while custom e-commerce solutions can take 4-6 weeks.",
+    },
+    {
+      question: "Do you offer website maintenance?",
+      answer:
+        "Yes! We provide ongoing maintenance, updates, and security enhancements to ensure your website stays up to date and secure.",
+    },
+    {
+      question: "Can you improve my website's SEO ranking?",
+      answer:
+        "Absolutely! We use advanced SEO techniques to enhance visibility, optimize content, and improve search rankings for your business.",
     },
   ];
 
@@ -187,76 +200,27 @@ export default function Home() {
           ))}
         </ul>
       </section>
-      <div className="flex flex-col-reverse lg:flex-row overflow-hidden lg:gap-[150px] lg:justify-center">
-        <section
-          id="team"
-          className="cont flex flex-col lg:!mx-0 !px-[60px] bg-gradient text-black drop-shadow-xl flex-none"
-        >
-          <h2 className="!text-[64px] text-white">OUR TEAM</h2>
-          <Swiper
-            effect={"cards"}
-            grabCursor={true}
-            cardsEffect={{ slideShadows: true }}
-            modules={[EffectCards]}
-            className="mySwiper my-auto max-w-[200px] md:max-w-[300px] overflow-clip"
-          >
-            {teamMembers.map((member, index) => (
-              <SwiperSlide
-                key={index}
-                className="w-[200px] md:w-[300px] mx-auto bg-white"
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="size-[200px] md:size-[300px]"
-                />
-                <div className="py-[15px] px-[10px]">
-                  <h3 className="mt-[10px] font-bold">{member.name}</h3>
-                  <span>{member.role}</span>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </section>
-        <section className="cont lg:!mx-0">
-          <h2 className="!text-[64px] mb-[20px]">STATISTICS</h2>
-          <div className="flex flex-col gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="flex items-center gap-[20px]"
-              >
-                <img src={stat.icon} />
-                <div>
-                  <CountUp
-                    start={0}
-                    end={stat.number}
-                    delay={0}
-                    enableScrollSpy
-                    scrollSpyOnce
-                    duration={stat.duration}
-                    onEnd={() => {
-                      document.getElementById(stat.id)!.textContent = `+`;
-                    }}
-                  >
-                    {({ countUpRef }) => (
-                      <div className="flex text-secondary text-[96px] font-bold">
-                        <span ref={countUpRef} />
-                        <span id={stat.id}></span>
-                      </div>
-                    )}
-                  </CountUp>
-                  <span className="text-[32px] text-gray-700">{stat.text}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-      </div>
+      <section
+        id="team"
+        className="cont flex flex-col lg:!mx-auto !px-[0px] text-black drop-shadow-xl flex-none"
+      >
+        <h2 className="!text-[64px]">OUR TEAM</h2>
+        <ul className="grid w-fit mx-auto mt-[20px] md:grid-cols-2 lg:grid-cols-4 gap-[15px]">
+          {teamMembers.map((member) => (
+            <li className="w-[200px] md:w-[300px] mx-auto bg-white shadow-lg">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="size-[200px] md:size-[300px]"
+              />
+              <div className="py-[15px] px-[10px]">
+                <h3 className="mt-[10px] font-bold">{member.name}</h3>
+                <span>{member.role}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
       <section id="reviews" className="my-[50px]">
         <h2 className="text-center text-[26px] font-bold mb-[20px]">
           What Clients Say
@@ -265,7 +229,7 @@ export default function Home() {
           {testimonials.map((review, index) => (
             <div
               key={index}
-              className="p-[20px] flex flex-col justify-between gap-[10px] bg-white rounded-[15px] shadow-lg transition-shadow hover:shadow-none duration-300"
+              className="p-[20px] flex flex-col justify-between gap-[10px] bg-white rounded-[15px] shadow-lg transition-shadow hover:shadow-none hover:outline hover:outline-dashed bo duration-300"
             >
               <div>
                 <div className="flex gap-1 mb-2 text-[36px]">
@@ -306,41 +270,45 @@ export default function Home() {
             Learn More
           </Link>
         </div>
-        <div className="lg:w-1/2 grid grid-cols-2 gap-[10px]">
-          <motion.img
-            src="/about/office.png"
-            alt="About us"
-            className="rounded-lg shadow-lg w-full h-auto"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-          />
-          <motion.img
-            src="/about/present.png"
-            alt="Our team"
-            className="rounded-lg shadow-lg w-full h-auto"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          />
-          <motion.img
-            src="/about/coffee.png"
-            alt="Our office"
-            className="rounded-lg shadow-lg w-full h-auto"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          />
-          <motion.img
-            src="/about/empty.png"
-            alt="Work in progress"
-            className="rounded-lg shadow-lg w-full h-auto"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          />
+        <div className="flex flex-col gap-8">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-[20px]"
+            >
+              <img src={stat.icon} />
+              <div>
+                <CountUp
+                  start={0}
+                  end={stat.number}
+                  delay={0}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  duration={3}
+                  onStart={() => {
+                    setTimeout(() => {
+                      document.getElementById(stat.id)!.textContent = `+`;
+                    }, 3000);
+                  }}
+                >
+                  {({ countUpRef }) => (
+                    <div className="flex text-secondary text-[96px] font-bold">
+                      <span ref={countUpRef} />
+                      <span id={stat.id}></span>
+                    </div>
+                  )}
+                </CountUp>
+                <span className="text-[32px] text-gray-700">{stat.text}</span>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
+      <FaqSection faqs={faqs} />
       <Quote />
     </>
   );

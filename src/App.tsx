@@ -7,6 +7,7 @@ import Seo from "./pages/Seo";
 
 import "./globals.css";
 import Layout from "./layouts/Layout";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/design" element={<Design />} />
           <Route path="/media" element={<Media />} />
           <Route path="/seo" element={<Seo />} />
+          <Route path="/about" element={<About />} />
         </Route>
       </Routes>
     </Router>

@@ -9,6 +9,35 @@ export default function Website() {
     elem?.scrollIntoView();
   };
 
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: "What services does WebCoders provide?",
+      answer:
+        "We specialize in website development, UI/UX design, SEO optimization, and digital media solutions tailored to your business needs.",
+    },
+    {
+      question: "How long does it take to build a website?",
+      answer:
+        "The timeline varies based on complexity. A simple landing page takes about a week, while custom e-commerce solutions can take 4-6 weeks.",
+    },
+    {
+      question: "Do you offer website maintenance?",
+      answer:
+        "Yes! We provide ongoing maintenance, updates, and security enhancements to ensure your website stays up to date and secure.",
+    },
+    {
+      question: "Can you improve my website's SEO ranking?",
+      answer:
+        "Absolutely! We use advanced SEO techniques to enhance visibility, optimize content, and improve search rankings for your business.",
+    },
+  ];
+
   const websitePackages = [
     {
       type: "WordPress",
@@ -210,9 +239,21 @@ export default function Website() {
         </ul>
       </section>
       <section className="cont bg-gray-100 drop-shadow-xl">
-        <div className="tab-wrapper">
+        <div className="tab-wrapper flex-col md:flex-row">
           <div
-            className="tab-bg"
+            className="tab-bg md:hidden"
+            style={{
+              transform:
+                activeTab === "WordPress"
+                  ? "translateY(0%)"
+                  : activeTab === "Custom"
+                  ? "translateY(100%)"
+                  : "translateY(201%)",
+              height: "33.3333%",
+            }}
+          />
+          <div
+            className="tab-bg hidden md:block "
             style={{
               transform:
                 activeTab === "WordPress"
@@ -335,42 +376,37 @@ export default function Website() {
           </li>
         </ul>
       </section> */}
-      <section id="faq" className="cont">
-        <h2>Frequently Asked Questions (FAQ)</h2>
-        <ul className="mt-[20px] *:not-last:mb-[20px] *:*:first:text-secondary">
-          <li>
-            <p>Q: How long does it take to create content?</p>
-            <p>
-              A: Timelines vary by project, but blog posts usually take 3–5
-              business days, videos take 7–10 days, and social media graphics
-              are delivered within 5 business days. Custom content strategies
-              are created on a monthly basis.
-            </p>
-          </li>
-          <li>
-            <p>Q: Can I request revisions?</p>
-            <p>
-              A: Yes! We offer up to 2 free revisions per project. Additional
-              revisions can be requested for a small fee.
-            </p>
-          </li>
-          <li>
-            <p>Q: Can you help me with social media management too?</p>
-            <p>
-              A: Of course! We offer content strategy services that include
-              content planning, post ideas, and performance tracking to maximize
-              engagement.
-            </p>
-          </li>
-          <li>
-            <p>Q: What if I need custom services not listed here?</p>
-            <p>
-              A: We can create a custom content package tailored to your brand’s
-              needs. Just reach out, and let’s discuss how we can bring your
-              ideas to life!
-            </p>
-          </li>
-        </ul>
+      <section className="cont my-[50px]">
+        <h2 className="text-[36px] font-bold text-center">
+          Frequently Asked Questions
+        </h2>
+        <div className="mt-[20px] max-w-[800px] mx-auto">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="mb-[5px] last:border-none overflow-hidden transition-all duration-500"
+            >
+              <button
+                className="w-full cursor-pointer text-left font-semibold text-[24px] p-[20px] flex justify-between items-center text-white bg-gradient-to-r from-secondary via-gradient to-secondary bg-[size:200%_200%] bg-[position:0%_0%] hover:bg-[position:100%_100%] transition-all duration-600"
+                onClick={() => toggleFAQ(index)}
+              >
+                {faq.question}
+                <span className="text-2xl cursor-pointer">
+                  {openIndex === index ? "✕" : "＋"}
+                </span>
+              </button>
+              <div
+                className={`grid transition-all bg-gray-200 px-[15px] duration-500 ease-in-out ${
+                  openIndex === index
+                    ? "grid-rows-[1fr] opacity-100 py-[15px]"
+                    : "grid-rows-[0fr] opacity-0 py-0"
+                }`}
+              >
+                <p className="overflow-hidden text-gray-700">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );

@@ -14,7 +14,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="px-[10px] md:px-0 py-[20px] md:pb-[50px] lg:py-[20px] lg:flex lg:items-center bg-bg text-white">
+    <footer className="px-[10px] md:px-0 !my-[5px] !py-[20px] md:pb-[50px] lg:!py-[20px] lg:flex lg:items-center bg-bg text-white">
       <div className="mx-auto w-fit">
         <span className="text-[48px] md:text-[96px] font-extrabold">
           WebCoders

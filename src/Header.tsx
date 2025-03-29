@@ -1,66 +1,57 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
   return (
-    <header className="bg-bg text-white">
+    <header className="bg-bg text-white relative">
+      {/* Desktop Header */}
       <div
         id="header-desktop"
-        className="hidden lg:flex justify-between mx-auto px-[20px] py-[15px]"
+        className="hidden lg:flex max-w-[1280px] justify-between mx-auto px-[20px] py-[15px]"
       >
         <div className="flex w-[100%] justify-between items-center">
           <NavLink id="logo" to="/" className="text-[32px] font-extrabold">
             WebCoders
           </NavLink>
-          <nav className="flex gap-[30px] mx-auto text-[24px]">
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "text-secondary font-bold"
-                  : "inactive" + " hover:scale-[1.05] duration-75 ease-in-out"
-              }
-              to="/"
-            >
+          <nav className="flex gap-[30px] mx-auto text-[24px] relative">
+            <NavLink to="/" className="hover:text-secondary">
               Home
             </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "text-secondary font-bold"
-                  : "inactive" + " hover:scale-[1.05] duration-75 ease-in-out"
-              }
-              to="/website"
+            <div
+              className="relative group"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
             >
-              Website
+              <span className="cursor-pointer transition-all">Services</span>
+              <div
+                className={`absolute top-full left-0 mt-2 w-[200px] bg-bg p-2 shadow-lg flex flex-col transition-all duration-300 ease-in-out ${
+                  isServicesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+                onClick={() => setIsServicesOpen(false)}
+              >
+                <NavLink to="/website" className="hover:text-secondary p-2">
+                  Website
+                </NavLink>
+                <NavLink to="/design" className="hover:text-secondary p-2">
+                  Design
+                </NavLink>
+                <NavLink to="/media" className="hover:text-secondary p-2">
+                  Media
+                </NavLink>
+                <NavLink to="/seo" className="hover:text-secondary p-2">
+                  SEO
+                </NavLink>
+              </div>
+            </div>
+            <NavLink to="/about" className="hover:text-secondary">
+              About
             </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "text-secondary font-bold"
-                  : "inactive" + " hover:scale-[1.05] duration-75 ease-in-out"
-              }
-              to="/design"
-            >
-              Design
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "text-secondary font-bold"
-                  : "inactive" + " hover:scale-[1.05] duration-75 ease-in-out"
-              }
-              to="/media"
-            >
-              Media
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "text-secondary font-bold"
-                  : "inactive" + " hover:scale-[1.05] duration-75 ease-in-out"
-              }
-              to="/seo"
-            >
-              SEO
+            <NavLink to="/contact" className="hover:text-secondary">
+              Contact
             </NavLink>
           </nav>
           <ul id="contacts" className="mt-[5px]">
@@ -84,11 +75,9 @@ export default function Header() {
             </li>
           </ul>
         </div>
-
-        <button className="px-[20pxx] p-[10px] border ml-[30px] !mt-0 whitespace-nowrap hover:bg-secondary hover:border-secondary">
-          Contact Us
-        </button>
       </div>
+
+      {/* Mobile Header */}
       <div
         id="header-mobile"
         className="flex items-center justify-between lg:hidden px-[10px] py-[10px] md:px-[20px] md:py-[15px]"
@@ -98,6 +87,9 @@ export default function Header() {
             to="/"
             id="logo"
             className="text-[24px] md:text-[32px] font-extrabold"
+            onClick={() => {
+              document.getElementById("dropdown")?.toggleAttribute("hidden");
+            }}
           >
             WebCoders
           </NavLink>
@@ -115,18 +107,58 @@ export default function Header() {
 
         <div
           id="dropdown"
-          className="absolute bg-[#313131] w-[100%] h-[400px] md:h-[500px] top-[60px] md:top-[70px] left-0"
+          className="absolute bg-bg w-[100%] md:h-[500px] top-[60px] md:top-[70px] left-0 z-10"
           hidden
-          onClick={() => {
-            document.getElementById("dropdown")?.toggleAttribute("hidden");
-          }}
         >
           <nav className="flex flex-col items-end md:items-start content-center my-auto gap-[20px] md:gap-[30px] py-[40px] md:py-[70px] px-[20px] md:px-[50px] text-[40px] font-light">
-            <NavLink to="/">Home &gt;</NavLink>
-            <NavLink to="/website">Website &gt;</NavLink>
-            <NavLink to="/design">Design &gt;</NavLink>
-            <NavLink to="/media">Media &gt;</NavLink>
-            <NavLink to="/seo">SEO &gt;</NavLink>
+            <NavLink
+              to="/website"
+              onClick={() => {
+                document.getElementById("dropdown")?.toggleAttribute("hidden");
+              }}
+            >
+              WEBSITE &gt;
+            </NavLink>
+            <NavLink
+              to="/design"
+              onClick={() => {
+                document.getElementById("dropdown")?.toggleAttribute("hidden");
+              }}
+            >
+              DESIGN &gt;
+            </NavLink>
+            <NavLink
+              to="/media"
+              onClick={() => {
+                document.getElementById("dropdown")?.toggleAttribute("hidden");
+              }}
+            >
+              MEDIA &gt;
+            </NavLink>
+            <NavLink
+              to="/seo"
+              onClick={() => {
+                document.getElementById("dropdown")?.toggleAttribute("hidden");
+              }}
+            >
+              SEO &gt;
+            </NavLink>
+            <NavLink
+              to="/about"
+              onClick={() => {
+                document.getElementById("dropdown")?.toggleAttribute("hidden");
+              }}
+            >
+              ABOUT &gt;
+            </NavLink>
+            <NavLink
+              to="/contact"
+              onClick={() => {
+                document.getElementById("dropdown")?.toggleAttribute("hidden");
+              }}
+            >
+              CONTACT &gt;
+            </NavLink>
           </nav>
         </div>
       </div>
