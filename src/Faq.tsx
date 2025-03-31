@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 interface FaqItem {
@@ -23,8 +24,12 @@ export default function FaqSection({ faqs }: FaqSectionProps) {
       </h2>
       <div className="mt-[20px] max-w-[800px] mx-auto">
         {faqs.map((faq, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+            }}
             className="mb-[5px] last:border-none overflow-hidden transition-all duration-500"
           >
             <button
@@ -49,7 +54,7 @@ export default function FaqSection({ faqs }: FaqSectionProps) {
             >
               <p className="overflow-hidden text-gray-700">{faq.answer}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

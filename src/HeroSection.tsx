@@ -22,7 +22,7 @@ export default function HeroSection({
   };
 
   return (
-    <section id="hero" className="cont !p-0 md:h-[500px] flex">
+    <section id="hero" className="cont !px-[10px] !py-0 md:h-[500px] flex">
       <div className="my-auto flex-auto">
         <h1 className="font-extrabold">{title}</h1>
         <p className="text-secondary my-[10px]">{subtitle}</p>

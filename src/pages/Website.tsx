@@ -1,6 +1,8 @@
 import { useState } from "react";
 import HeroSection from "../HeroSection";
 import Quote from "../Quote";
+import FaqSection from "../Faq";
+import { motion } from "framer-motion";
 
 export default function Website() {
   const handleScroll = () => {
@@ -9,11 +11,34 @@ export default function Website() {
     elem?.scrollIntoView();
   };
 
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  // const steps = [
+  //   {
+  //     title: "Briefing",
+  //     description: "Gather requirements, analyze goals, and set the strategy.",
+  //     icon: "/icons/brief.png",
+  //   },
+  //   {
+  //     title: "Design",
+  //     description: "Create a unique design that reflects your brand identity.",
+  //     icon: "/icons/design.png",
+  //   },
+  //   {
+  //     title: "Development",
+  //     description: "Code and implement all website features seamlessly.",
+  //     icon: "/icons/development.png",
+  //   },
+  //   {
+  //     title: "Testing",
+  //     description:
+  //       "Perform quality checks, responsiveness, and performance optimization.",
+  //     icon: "/icons/testing.png",
+  //   },
+  //   {
+  //     title: "Launch",
+  //     description: "Deploy the website and provide initial support.",
+  //     icon: "/icons/launch.png",
+  //   },
+  // ];
 
   const faqs = [
     {
@@ -190,54 +215,49 @@ export default function Website() {
         scrollToId="quote"
       />
 
-      <section className="p-[10px] bg-linear-to-r from-secondary to-gradient">
-        <ul className="mx-auto w-fit grid grid-cols-1 md:grid-cols-2 gap-[10px] lg:grid-cols-4 lg:justify-items-center *:bg-white">
-          <li className="p-[10px] max-w-[300px] g-[220px] ">
-            <img
-              src="/icons/web.png"
-              alt=""
-              className="size-[70px] mb-[10px]"
-            />
-            <p className="!text-[20px]">
-              Используем современные технологии создания дизайна. Оформление и
-              структуризация сайта под вашу нишу
-            </p>
-          </li>
-          <li className="p-[10px] max-w-[300px] g-[220px] ">
-            <img
-              src="/icons/web.png"
-              alt=""
-              className="size-[70px] mb-[10px]"
-            />
-            <p className="!text-[20px]">
-              Используем современные технологии создания дизайна. Оформление и
-              структуризация сайта под вашу нишу
-            </p>
-          </li>
-          <li className="p-[10px] max-w-[300px] g-[220px] ">
-            <img
-              src="/icons/web.png"
-              alt=""
-              className="size-[70px] mb-[10px]"
-            />
-            <p className="!text-[20px]">
-              Используем современные технологии создания дизайна. Оформление и
-              структуризация сайта под вашу нишу
-            </p>
-          </li>
-          <li className="p-[10px] max-w-[300px] g-[220px] ">
-            <img
-              src="/icons/web.png"
-              alt=""
-              className="size-[70px] mb-[10px]"
-            />
-            <p className="!text-[20px]">
-              Используем современные технологии создания дизайна. Оформление и
-              структуризация сайта под вашу нишу
-            </p>
-          </li>
+      <section className="p-[20px] bg-gradient-to-r from-secondary to-gradient">
+        <ul className="mx-auto w-fit grid grid-cols-1 md:grid-cols-2 gap-[20px] lg:grid-cols-4 lg:justify-items-center">
+          {[
+            {
+              icon: "/icons/website/web1.png",
+              text: "Your site adapts to any screen — mobile, tablet, or desktop — for a flawless user experience everywhere.",
+            },
+            {
+              icon: "/icons/website/web2.png",
+              text: "We don’t use templates. Each site is tailored to your business goals and organized for clarity and results.",
+            },
+            {
+              icon: "/icons/website/web3.png",
+              text: "Speed matters. Our code is clean and optimized so your website loads in a blink — even on mobile networks.",
+            },
+            {
+              icon: "/icons/website/web4.png",
+              text: "Built-in SEO tools and structure to help your site rank higher and get noticed by search engines.",
+            },
+          ].map((item, index) => (
+            <motion.li
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="p-[20px] w-full max-w-[300px] bg-white rounded-[15px] shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center"
+            >
+              <div className="bg-bg p-[15px] rounded-full mb-[15px]">
+                <img
+                  src={item.icon}
+                  alt="Feature Icon"
+                  className="w-[60px] h-[60px] object-contain"
+                />
+              </div>
+              <p className="text-gray-800 text-[16px] md:text-[18px]">
+                {item.text}
+              </p>
+            </motion.li>
+          ))}
         </ul>
       </section>
+
       <section className="cont bg-gray-100 drop-shadow-xl">
         <div className="tab-wrapper flex-col md:flex-row">
           <div
@@ -376,38 +396,65 @@ export default function Website() {
           </li>
         </ul>
       </section> */}
-      <section className="cont my-[50px]">
-        <h2 className="text-[36px] font-bold text-center">
-          Frequently Asked Questions
+      <section className="cont py-[50px] bg-gray-100">
+        <h2 className="text-[36px] font-bold text-center mb-[40px]">
+          Our Web Development Process
         </h2>
-        <div className="mt-[20px] max-w-[800px] mx-auto">
-          {faqs.map((faq, index) => (
-            <div
+        <div className="grid gap-[30px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              title: "1. Consultation",
+              icon: "/icons/process/chat.png",
+              text: "We discuss your business goals, needs, and ideas to build the perfect plan.",
+            },
+            {
+              title: "2. Design",
+              icon: "/icons/process/design.png",
+              text: "We create a layout and visuals in Figma tailored to your brand style.",
+            },
+            {
+              title: "3. Development",
+              icon: "/icons/process/code.png",
+              text: "We bring the design to life using clean, optimized HTML/CSS/JS code.",
+            },
+            {
+              title: "4. Optimization",
+              icon: "/icons/process/seo.png",
+              text: "Your site is optimized for performance, SEO, and mobile responsiveness.",
+            },
+            {
+              title: "5. Review & Launch",
+              icon: "/icons/process/launch.png",
+              text: "After revisions and final tweaks, your website goes live — stress-free!",
+            },
+            {
+              title: "6. Ongoing Support",
+              icon: "/icons/process/support.png",
+              text: "We offer continuous maintenance, updates, and improvements if needed.",
+            },
+          ].map((step, index) => (
+            <motion.div
               key={index}
-              className="mb-[5px] last:border-none overflow-hidden transition-all duration-500"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white p-[20px] rounded-[15px] shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center"
             >
-              <button
-                className="w-full cursor-pointer text-left font-semibold text-[24px] p-[20px] flex justify-between items-center text-white bg-gradient-to-r from-secondary via-gradient to-secondary bg-[size:200%_200%] bg-[position:0%_0%] hover:bg-[position:100%_100%] transition-all duration-600"
-                onClick={() => toggleFAQ(index)}
-              >
-                {faq.question}
-                <span className="text-2xl cursor-pointer">
-                  {openIndex === index ? "✕" : "＋"}
-                </span>
-              </button>
-              <div
-                className={`grid transition-all bg-gray-200 px-[15px] duration-500 ease-in-out ${
-                  openIndex === index
-                    ? "grid-rows-[1fr] opacity-100 py-[15px]"
-                    : "grid-rows-[0fr] opacity-0 py-0"
-                }`}
-              >
-                <p className="overflow-hidden text-gray-700">{faq.answer}</p>
-              </div>
-            </div>
+              <img
+                src={step.icon}
+                alt={step.title}
+                className="w-[60px] h-[60px] mb-[15px]"
+              />
+              <h3 className="text-[20px] font-bold text-secondary mb-[10px]">
+                {step.title}
+              </h3>
+              <p className="text-gray-700">{step.text}</p>
+            </motion.div>
           ))}
         </div>
       </section>
+      <FaqSection faqs={faqs} />
     </>
   );
 }

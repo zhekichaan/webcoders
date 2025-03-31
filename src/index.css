@@ -92,10 +92,6 @@ html {
   scroll-behavior: smooth;
 }
 
-main {
-  padding: 0 10px;
-}
-
 span {
   display: block;
 }
