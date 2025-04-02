@@ -22,11 +22,14 @@ export default function HeroSection({
   };
 
   return (
-    <section id="hero" className="cont !px-[10px] !py-0 md:h-[500px] flex">
+    <section
+      id="hero"
+      className="cont !px-[10px] !py-0 md:h-[500px] gap-[50px] flex"
+    >
       <div className="my-auto flex-auto">
         <h1 className="font-extrabold">{title}</h1>
         <p className="text-secondary my-[10px]">{subtitle}</p>
-        <span>{text}</span>
+        <span className="!text-[20px]">{text}</span>
         {buttonText && scrollToId && (
           <button onClick={handleScroll} className="btn">
             {buttonText}

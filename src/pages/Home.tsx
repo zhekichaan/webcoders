@@ -82,29 +82,6 @@ export default function Home() {
     },
   ];
 
-  const teamMembers = [
-    {
-      name: "Stepan",
-      role: "Designer, 2D/3D Animator",
-      image: "stepan.jpg",
-    },
-    {
-      name: "Mykola",
-      role: "Full-Stack, WordPress Developer",
-      image: "mykola.jpg",
-    },
-    {
-      name: "Mykita",
-      role: "SEO, Management, Advertisement",
-      image: "mykita.jpg",
-    },
-    {
-      name: "Maria",
-      role: "Content Creator, Social Media",
-      image: "maria.jpg",
-    },
-  ];
-
   const testimonials = [
     {
       name: "John Doe",
@@ -138,85 +115,55 @@ export default function Home() {
     },
   ];
 
-  // const services = [
-  //   {
-  //     title: "Website",
-  //     icon: "/icons/web.png",
-  //     href: "/website",
-  //     features: [
-  //       "Landing Pages",
-  //       "Business Sites",
-  //       "E-commerce Platforms",
-  //       "Custom CMS Solutions",
-  //     ],
-  //   },
-  //   {
-  //     title: "Design",
-  //     icon: "/icons/web.png",
-  //     href: "/design",
-  //     features: [
-  //       "UI/UX Interfaces",
-  //       "Brand Identity Kits",
-  //       "Figma Prototypes",
-  //       "Custom Logo Design",
-  //     ],
-  //   },
-  //   {
-  //     title: "Media",
-  //     icon: "/icons/web.png",
-  //     href: "/media",
-  //     features: [
-  //       "SMM Graphics",
-  //       "Video Editing",
-  //       "Reels & Shorts",
-  //       "Motion Animation",
-  //     ],
-  //   },
-  //   {
-  //     title: "SEO",
-  //     icon: "/icons/web.png",
-  //     href: "/seo",
-  //     features: [
-  //       "Keyword Research",
-  //       "On-page Optimization",
-  //       "Google Ads Setup",
-  //       "Backlink Strategy",
-  //     ],
-  //   },
-  // ];
-
   return (
     <>
       <HeroSection
         title="WebCoders"
         subtitle="Full Cycle Digital Agency"
-        text="Развивайте свой бизнес с уверенностью в завтрашнем дне..."
+        text="We don’t just build websites — we build brands. From clean design to strategic SEO, we offer full-cycle digital services to grow your business. Let’s create something powerful, fast, and made to convert."
         imgSrc="/hero/home.png"
         buttonText="Get A Quote"
         scrollToId="quote"
       />
-      <section className="cont  my-[50px] flex flex-col lg:flex-row items-center gap-[50px]">
-        <div className="lg:w-1/2 text-center lg:text-left bg-gray-100 p-[30px] rounded-[15px]">
-          <h2 className="text-[36px] font-semibold">WHO WE ARE</h2>
-          <p className="text-gray-700 max-w-[800px] mt-[10px]">
-            At WebCoders, we believe in crafting digital experiences that drive
-            success. Our team of experts is dedicated to delivering high-quality
-            websites, designs, and marketing solutions tailored to your business
-            needs.
-          </p>
-          <p className="text-gray-700 max-w-[800px] mt-[10px]">
-            From modern designs to strategic SEO, we handle every aspect of your
-            online presence with professionalism and creativity. Let’s build
-            something great together!
-          </p>
-          <Link
-            to="/about"
-            className="btn mt-[20px] px-[30px] py-[10px] text-lg font-bold"
-          >
-            Learn More
-          </Link>
+      <div className="w-full bg-gradient-to-r from-secondary to-gradient overflow-hidden">
+        <div className="marquee whitespace-nowrap flex text-white py-[10px] text-[18px] font-semibold uppercase">
+          <span className="mr-[50px]">
+            We Build Fast, Beautiful & SEO-Optimized Websites · We Build Fast,
+            Beautiful & SEO-Optimized Websites ·
+          </span>
+          <span>
+            We Build Fast, Beautiful & SEO-Optimized Websites · We Build Fast,
+            Beautiful & SEO-Optimized Websites ·
+          </span>
         </div>
-        <div className="flex flex-col gap-8">
+      </div>
+
+      <section className="cont relative my-[50px] h-[500px] !py-0 !px-[50px] flex flex-col items-center gap-[50px] bg-[url(/office.jpg)] bg-cover shadow-2xl">
+        <div className="absolute flex flex-col h-full left-0 text-center max-w-[700px] lg:text-left bg-[rgba(0,0,0,0.5)] p-[30px] rounded-l-[15px] text-white">
+          <div className="my-auto">
+            <h2 className="text-[36px] font-semibold">WHO WE ARE</h2>
+            <p className="max-w-[800px] mt-[10px]">
+              At WebCoders, we believe in crafting digital experiences that
+              drive success. Our team of experts is dedicated to delivering
+              high-quality websites, designs, and marketing solutions tailored
+              to your business needs.
+            </p>
+            <p className="max-w-[800px] mt-[10px]">
+              From modern designs to strategic SEO, we handle every aspect of
+              your online presence with professionalism and creativity. Let’s
+              build something great together!
+            </p>
+            <Link
+              to="/about"
+              className="btn mt-[20px] px-[30px] py-[10px] text-lg font-bold"
+            >
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="cont">
+        <div className="flex gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -295,63 +242,6 @@ export default function Home() {
           </motion.section>
         );
       })}
-      {/* <section className="cont p-[10px] bg-gray-100">
-        <h2 className="text-[26px] mb-[20px] text-center">SERVICES</h2>
-        <ul className="mx-auto w-fit grid grid-cols-1 md:grid-cols-2 gap-[20px] lg:grid-cols-4">
-          {services.map((item, index) => (
-            <li
-              key={index}
-              className="p-[20px] max-w-[300px] bg-white rounded-[15px] drop-shadow-sm flex flex-col"
-            >
-              <div>
-                <div className="flex items-center">
-                  <img
-                    src={item.icon}
-                    alt={item.title}
-                    className="size-[70px] mr-[10px]"
-                  />
-                  <h3 className="text-[22px] font-bold text-secondary">
-                    {item.title}
-                  </h3>
-                </div>
-
-                <p className="font-semibold mt-[10px] mb-[5px]">What we do:</p>
-                <ul className="text-sm space-y-1">
-                  {item.features.map((feat, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <span className="text-secondary">✔</span> {feat}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Link to={item.href} className="btn w-full mt-[15px] text-center">
-                See More
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section> */}
-      <section
-        id="team"
-        className="cont flex flex-col lg:!mx-auto text-black drop-shadow-xl flex-none"
-      >
-        <h2 className="font-semibold">Our Team</h2>
-        <ul className="grid w-fit mx-auto mt-[20px] md:grid-cols-2 lg:grid-cols-4 gap-[15px]">
-          {teamMembers.map((member) => (
-            <li className="w-[200px] md:w-[300px] mx-auto bg-white shadow-lg">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="size-[200px] md:size-[300px]"
-              />
-              <div className="py-[15px] px-[10px]">
-                <h3 className="mt-[10px] font-bold">{member.name}</h3>
-                <span>{member.role}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
       <section id="reviews" className="cont my-[50px]">
         <h2 className="!text-[30px] md:!text-[40px] font-bold mb-[20px]">
           What Clients Say

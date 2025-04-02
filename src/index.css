@@ -34,6 +34,19 @@
   font-size: 20px !important;
 }
 
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee-scroll 20s linear infinite;
+}
+
 .package-type {
   font-size: 16px;
   font-weight: 700;
