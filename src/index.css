@@ -34,17 +34,20 @@
   font-size: 20px !important;
 }
 
-@keyframes marquee-scroll {
+/* Анимация движения влево */
+@keyframes scroll-left {
   0% {
     transform: translateX(0%);
   }
+
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
-.marquee {
-  animation: marquee-scroll 20s linear infinite;
+/* Применяем анимацию */
+.animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
 }
 
 .package-type {

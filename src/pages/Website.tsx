@@ -237,7 +237,7 @@ export default function Website() {
           ].map((item, index) => (
             <motion.li
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0.5, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -435,7 +435,7 @@ export default function Website() {
           ].map((step, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0.5, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}

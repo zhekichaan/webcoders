@@ -125,19 +125,40 @@ export default function Home() {
         buttonText="Get A Quote"
         scrollToId="quote"
       />
-      <div className="w-full bg-gradient-to-r from-secondary to-gradient overflow-hidden">
-        <div className="marquee whitespace-nowrap flex text-white py-[10px] text-[18px] font-semibold uppercase">
-          <span className="mr-[50px]">
-            We Build Fast, Beautiful & SEO-Optimized Websites · We Build Fast,
-            Beautiful & SEO-Optimized Websites ·
-          </span>
-          <span>
-            We Build Fast, Beautiful & SEO-Optimized Websites · We Build Fast,
-            Beautiful & SEO-Optimized Websites ·
-          </span>
+      <div className="bg-linear-to-r from-secondary to-gradient text-white rounded overflow-hidden">
+        <div className="flex whitespace-nowrap font-semibold text-[16px] py-2">
+          <div className="flex animate-scroll-left">
+            {[
+              "We Build Fast Websites",
+              "Clean Design — Modern Tech",
+              "100% Mobile Friendly",
+              "SEO-Optimized by Default",
+              "Let’s Build Your Online Presence",
+              "We Build Fast Websites",
+              "Clean Design — Modern Tech",
+            ].map((text, i) => (
+              <div key={i} className="px-[30px]">
+                {text}
+              </div>
+            ))}
+          </div>
+          <div className="flex animate-scroll-left">
+            {[
+              "We Build Fast Websites",
+              "Clean Design — Modern Tech",
+              "100% Mobile Friendly",
+              "SEO-Optimized by Default",
+              "Let’s Build Your Online Presence",
+              "We Build Fast Websites",
+              "Clean Design — Modern Tech",
+            ].map((text, i) => (
+              <div key={i} className="px-[30px]">
+                {text}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-
       <section className="cont relative my-[50px] h-[500px] !py-0 !px-[50px] flex flex-col items-center gap-[50px] bg-[url(/office.jpg)] bg-cover shadow-2xl">
         <div className="absolute flex flex-col h-full left-0 text-center max-w-[700px] lg:text-left bg-[rgba(0,0,0,0.5)] p-[30px] rounded-l-[15px] text-white">
           <div className="my-auto">
@@ -167,7 +188,7 @@ export default function Home() {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0.5, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
@@ -204,7 +225,7 @@ export default function Home() {
       {sections.map((sec, index) => {
         const isEven = index % 2 === 0;
         const animation = {
-          initial: { opacity: 0, x: isEven ? -100 : 100 },
+          initial: { opacity: 0.5, x: isEven ? -100 : 100 },
           whileInView: { opacity: 1, x: 0 },
         };
 
