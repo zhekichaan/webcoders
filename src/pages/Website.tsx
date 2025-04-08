@@ -11,35 +11,6 @@ export default function Website() {
     elem?.scrollIntoView();
   };
 
-  // const steps = [
-  //   {
-  //     title: "Briefing",
-  //     description: "Gather requirements, analyze goals, and set the strategy.",
-  //     icon: "/icons/brief.png",
-  //   },
-  //   {
-  //     title: "Design",
-  //     description: "Create a unique design that reflects your brand identity.",
-  //     icon: "/icons/design.png",
-  //   },
-  //   {
-  //     title: "Development",
-  //     description: "Code and implement all website features seamlessly.",
-  //     icon: "/icons/development.png",
-  //   },
-  //   {
-  //     title: "Testing",
-  //     description:
-  //       "Perform quality checks, responsiveness, and performance optimization.",
-  //     icon: "/icons/testing.png",
-  //   },
-  //   {
-  //     title: "Launch",
-  //     description: "Deploy the website and provide initial support.",
-  //     icon: "/icons/launch.png",
-  //   },
-  // ];
-
   const faqs = [
     {
       question: "What services does WebCoders provide?",
@@ -334,68 +305,6 @@ export default function Website() {
         </ul>
       </section>
       <Quote />
-      {/* <section
-        id="projects"
-        className="cont lg:!px-[20px] bg-gray-100 drop-shadow-xl"
-      >
-        <h2>Our Projects</h2>
-        <ul className="mt-[20px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[20px] md:gap-x-[20px] mx-auto w-fit *:w-[300px] *:lg:w-[400px]">
-          <li>
-            <a href="">
-              <img src="" alt="" className="w-[100%] h-[200px]" />
-              <p className="text-secondary mt-[10px] mb-[5px]">
-                Site Type / Business Type
-              </p>
-              <p>Go to Website &gt;</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="" alt="" className="w-[100%] h-[200px]" />
-              <p className="text-secondary mt-[10px] mb-[5px]">
-                Site Type / Business Type
-              </p>
-              <p>Go to Website &gt;</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="" alt="" className="w-[100%] h-[200px]" />
-              <p className="text-secondary mt-[10px] mb-[5px]">
-                Site Type / Business Type
-              </p>
-              <p>Go to Website &gt;</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="" alt="" className="w-[100%] h-[200px]" />
-              <p className="text-secondary mt-[10px] mb-[5px]">
-                Site Type / Business Type
-              </p>
-              <p>Go to Website &gt;</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="" alt="" className="w-[100%] h-[200px]" />
-              <p className="text-secondary mt-[10px] mb-[5px]">
-                Site Type / Business Type
-              </p>
-              <p>Go to Website &gt;</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="" alt="" className="w-[100%] h-[200px]" />
-              <p className="text-secondary mt-[10px] mb-[5px]">
-                Site Type / Business Type
-              </p>
-              <p>Go to Website &gt;</p>
-            </a>
-          </li>
-        </ul>
-      </section> */}
       <section className="cont py-[50px] bg-gray-100">
         <h2 className="text-[36px] font-bold text-center mb-[40px]">
           Our Web Development Process
